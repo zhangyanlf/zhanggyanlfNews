@@ -1,0 +1,6 @@
+framework module Pods_zhangyanlfNews {
+  umbrella header "Pods-zhangyanlfNews-umbrella.h"
+
+  export *
+  module * { export * }
+}
