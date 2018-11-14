@@ -3,18 +3,10 @@
 
 target 'zhangyanlfNews' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  pod 'Alamofire'
+  pod 'SwiftyJSON'
+  pod 'HandyJSON'
+  pod 'Kingfisher'
   use_frameworks!
-
-  # Pods for zhangyanlfNews
-
-  target 'zhangyanlfNewsTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
-
-  target 'zhangyanlfNewsUITests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
 
 end
