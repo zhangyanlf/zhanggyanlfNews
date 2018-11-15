@@ -74,6 +74,10 @@ class ZLNoLoginHeaderView: UIView {
         sender.isSelected = !sender.isSelected
         UserDefaults.standard.set(sender.isSelected, forKey: isNight)
         MyTheme.switchNight(sender.isSelected)
+        
+        //发送通知
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "dayoOrNightChange"), object: sender.isSelected)
+        
     }
     
 
