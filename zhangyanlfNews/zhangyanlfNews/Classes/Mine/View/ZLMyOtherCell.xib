@@ -65,8 +65,9 @@
                 <outlet property="leftLabel" destination="0sY-Sr-aCa" id="GWH-Gg-nhx"/>
                 <outlet property="rightLabel" destination="ffn-ec-FkN" id="4BX-6l-CYi"/>
                 <outlet property="rigjtImageView" destination="tcJ-kd-RKn" id="f5K-fg-InT"/>
+                <outlet property="separatorView" destination="yas-bN-reG" id="Slp-ev-hYt"/>
             </connections>
-            <point key="canvasLocation" x="132.80000000000001" y="154.72263868065968"/>
+            <point key="canvasLocation" x="-115" y="140"/>
         </tableViewCell>
     </objects>
     <resources>

@@ -37,6 +37,8 @@ class ZLConcernCell: UICollectionViewCell, RegisterCellFromNib {
         super.awakeFromNib()
         tipsBtn.layer.borderWidth = 1
         tipsBtn.layer.borderColor = UIColor.white.cgColor
+        theme_backgroundColor = "colors.cellBackgroundColor"
+        concernLabel.theme_textColor = "colors.black"
     }
 
 }

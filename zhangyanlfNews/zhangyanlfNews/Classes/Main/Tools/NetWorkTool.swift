@@ -89,6 +89,6 @@ extension NetWorkToolProtocol {
     }
 }
 
-struct NetWorkTool:NetWorkToolProtocol {
+struct NetWorkTool: NetWorkToolProtocol {
     
 }

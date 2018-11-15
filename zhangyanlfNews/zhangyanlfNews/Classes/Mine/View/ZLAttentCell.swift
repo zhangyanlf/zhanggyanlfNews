@@ -17,11 +17,14 @@ class ZLAttentCell: UITableViewCell, RegisterCellFromNib {
     ///箭头
     @IBOutlet weak var rigjtImageView: UIImageView!
     
+    @IBOutlet weak var topView: UIView!
+    
     ///关注头像
     @IBOutlet weak var attentImageView: UIImageView!
     ///关注CollectionView
     @IBOutlet weak var attentCollectionView: UICollectionView!
-    
+    ///分割线
+    @IBOutlet weak var separatorView: UIView!
     var attents = [ZLMyAttent](){
         didSet {
             attentCollectionView.reloadData()
@@ -50,6 +53,14 @@ class ZLAttentCell: UITableViewCell, RegisterCellFromNib {
         attentCollectionView.delegate = self
         attentCollectionView.dataSource = self
         attentCollectionView.zl_registerCell(cell: ZLConcernCell.self)
+        
+        leftLabel.theme_textColor = "colors.black";
+        rightLabel.theme_textColor = "colors.cellRightTextColor"
+        rigjtImageView.theme_image = "images.cellRightArrow"
+        separatorView.theme_backgroundColor = "colors.separatorViewColor"
+        theme_backgroundColor = "colors.cellBackgroundColor"
+        topView.theme_backgroundColor = "colors.cellBackgroundColor"
+        attentCollectionView.theme_backgroundColor = "colors.cellBackgroundColor"
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

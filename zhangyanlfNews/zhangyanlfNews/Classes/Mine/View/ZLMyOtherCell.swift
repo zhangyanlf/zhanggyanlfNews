@@ -16,9 +16,15 @@ class ZLMyOtherCell: UITableViewCell, RegisterCellFromNib{
     ///箭头
     @IBOutlet weak var rigjtImageView: UIImageView!
     
+    @IBOutlet weak var separatorView: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        leftLabel.theme_textColor = "colors.black";
+        rightLabel.theme_textColor = "colors.cellRightTextColor"
+        rigjtImageView.theme_image = "images.cellRightArrow"
+        separatorView.theme_backgroundColor = "colors.separatorViewColor"
+        theme_backgroundColor = "colors.cellBackgroundColor"
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

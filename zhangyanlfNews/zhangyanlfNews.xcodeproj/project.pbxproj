@@ -16,6 +16,8 @@
 		A49ABE7B219BF6F200E63CF9 /* UIKit+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49ABE7A219BF6F200E63CF9 /* UIKit+Extension.swift */; };
 		A49ABE7E219C082000E63CF9 /* ZLConcernCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49ABE7C219C082000E63CF9 /* ZLConcernCell.swift */; };
 		A49ABE7F219C082000E63CF9 /* ZLConcernCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A49ABE7D219C082000E63CF9 /* ZLConcernCell.xib */; };
+		A49ABE81219C1FAF00E63CF9 /* ZLNoLoginHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49ABE80219C1FAF00E63CF9 /* ZLNoLoginHeaderView.swift */; };
+		A49ABE83219C1FC000E63CF9 /* ZLNoLoginHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A49ABE82219C1FC000E63CF9 /* ZLNoLoginHeaderView.xib */; };
 		A4C5D133219A796800B9F4C1 /* ZLHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C5D117219A796800B9F4C1 /* ZLHomeViewController.swift */; };
 		A4C5D134219A796800B9F4C1 /* ZLVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C5D11D219A796800B9F4C1 /* ZLVideoViewController.swift */; };
 		A4C5D135219A796800B9F4C1 /* ZLHuoShanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C5D123219A796800B9F4C1 /* ZLHuoShanViewController.swift */; };
@@ -26,6 +28,9 @@
 		A4C5D13E219AA84300B9F4C1 /* ZLMyTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C5D13D219AA84300B9F4C1 /* ZLMyTabBar.swift */; };
 		A4C5D140219ABDE400B9F4C1 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C5D13F219ABDE400B9F4C1 /* Const.swift */; };
 		A4C5D143219ABF5700B9F4C1 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C5D142219ABF5700B9F4C1 /* UIColor+Extension.swift */; };
+		A4C65683219D1DBC00E8E118 /* MyTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C65682219D1DBC00E8E118 /* MyTheme.swift */; };
+		A4C65686219D3FDB00E8E118 /* default_theme.plist in Resources */ = {isa = PBXBuildFile; fileRef = A4C65685219D3FDB00E8E118 /* default_theme.plist */; };
+		A4C65688219D400700E8E118 /* night_theme.plist in Resources */ = {isa = PBXBuildFile; fileRef = A4C65687219D400700E8E118 /* night_theme.plist */; };
 		A4ED4AAE2194183F00A5E81C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4ED4AAC2194183F00A5E81C /* Main.storyboard */; };
 		A4ED4AB02194184000A5E81C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4ED4AAF2194184000A5E81C /* Assets.xcassets */; };
 		A4ED4AB32194184000A5E81C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4ED4AB12194184000A5E81C /* LaunchScreen.storyboard */; };
@@ -64,6 +69,8 @@
 		A49ABE7A219BF6F200E63CF9 /* UIKit+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIKit+Extension.swift"; sourceTree = "<group>"; };
 		A49ABE7C219C082000E63CF9 /* ZLConcernCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLConcernCell.swift; sourceTree = "<group>"; };
 		A49ABE7D219C082000E63CF9 /* ZLConcernCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZLConcernCell.xib; sourceTree = "<group>"; };
+		A49ABE80219C1FAF00E63CF9 /* ZLNoLoginHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLNoLoginHeaderView.swift; sourceTree = "<group>"; };
+		A49ABE82219C1FC000E63CF9 /* ZLNoLoginHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZLNoLoginHeaderView.xib; sourceTree = "<group>"; };
 		A4C5D117219A796800B9F4C1 /* ZLHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLHomeViewController.swift; sourceTree = "<group>"; };
 		A4C5D11D219A796800B9F4C1 /* ZLVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLVideoViewController.swift; sourceTree = "<group>"; };
 		A4C5D123219A796800B9F4C1 /* ZLHuoShanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLHuoShanViewController.swift; sourceTree = "<group>"; };
@@ -75,6 +82,9 @@
 		A4C5D13D219AA84300B9F4C1 /* ZLMyTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLMyTabBar.swift; sourceTree = "<group>"; };
 		A4C5D13F219ABDE400B9F4C1 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		A4C5D142219ABF5700B9F4C1 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		A4C65682219D1DBC00E8E118 /* MyTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTheme.swift; sourceTree = "<group>"; };
+		A4C65685219D3FDB00E8E118 /* default_theme.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = default_theme.plist; sourceTree = "<group>"; };
+		A4C65687219D400700E8E118 /* night_theme.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = night_theme.plist; sourceTree = "<group>"; };
 		A4ED4AA52194183F00A5E81C /* zhangyanlfNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zhangyanlfNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4ED4AAD2194183F00A5E81C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A4ED4AAF2194184000A5E81C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -128,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				A49ABE6C219BB7B000E63CF9 /* NetWorkTool.swift */,
+				A4C65682219D1DBC00E8E118 /* MyTheme.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -268,6 +279,7 @@
 		A4C5D126219A796800B9F4C1 /* Others */ = {
 			isa = PBXGroup;
 			children = (
+				A4C65684219D3F9D00E8E118 /* Theme */,
 				A4C5D127219A796800B9F4C1 /* AppDelegate.swift */,
 				A4C5D128219A796800B9F4C1 /* Info.plist */,
 				A4C5D13F219ABDE400B9F4C1 /* Const.swift */,
@@ -318,6 +330,8 @@
 				A49ABE75219BEDBF00E63CF9 /* ZLAttentCell.xib */,
 				A49ABE7C219C082000E63CF9 /* ZLConcernCell.swift */,
 				A49ABE7D219C082000E63CF9 /* ZLConcernCell.xib */,
+				A49ABE80219C1FAF00E63CF9 /* ZLNoLoginHeaderView.swift */,
+				A49ABE82219C1FC000E63CF9 /* ZLNoLoginHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -349,6 +363,15 @@
 				A49ABE7A219BF6F200E63CF9 /* UIKit+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		A4C65684219D3F9D00E8E118 /* Theme */ = {
+			isa = PBXGroup;
+			children = (
+				A4C65685219D3FDB00E8E118 /* default_theme.plist */,
+				A4C65687219D400700E8E118 /* night_theme.plist */,
+			);
+			path = Theme;
 			sourceTree = "<group>";
 		};
 		A4ED4A9C2194183F00A5E81C = {
@@ -520,9 +543,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A49ABE7F219C082000E63CF9 /* ZLConcernCell.xib in Resources */,
+				A49ABE83219C1FC000E63CF9 /* ZLNoLoginHeaderView.xib in Resources */,
 				A49ABE73219BD1C600E63CF9 /* ZLMyOtherCell.xib in Resources */,
 				A4ED4AB32194184000A5E81C /* LaunchScreen.storyboard in Resources */,
+				A4C65686219D3FDB00E8E118 /* default_theme.plist in Resources */,
 				A4ED4AB02194184000A5E81C /* Assets.xcassets in Resources */,
+				A4C65688219D400700E8E118 /* night_theme.plist in Resources */,
 				A49ABE77219BEDBF00E63CF9 /* ZLAttentCell.xib in Resources */,
 				A4ED4AAE2194183F00A5E81C /* Main.storyboard in Resources */,
 			);
@@ -556,7 +582,9 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-zhangyanlfNews/Pods-zhangyanlfNews-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/IBAnimatable/IBAnimatable.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftTheme/SwiftTheme.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -565,7 +593,9 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IBAnimatable.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftTheme.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -615,7 +645,9 @@
 				A49ABE72219BD1C600E63CF9 /* ZLMyOtherCell.swift in Sources */,
 				A4C5D135219A796800B9F4C1 /* ZLHuoShanViewController.swift in Sources */,
 				A49ABE7E219C082000E63CF9 /* ZLConcernCell.swift in Sources */,
+				A49ABE81219C1FAF00E63CF9 /* ZLNoLoginHeaderView.swift in Sources */,
 				A4C5D140219ABDE400B9F4C1 /* Const.swift in Sources */,
+				A4C65683219D1DBC00E8E118 /* MyTheme.swift in Sources */,
 				A4C5D143219ABF5700B9F4C1 /* UIColor+Extension.swift in Sources */,
 				A49ABE6D219BB7B000E63CF9 /* NetWorkTool.swift in Sources */,
 			);

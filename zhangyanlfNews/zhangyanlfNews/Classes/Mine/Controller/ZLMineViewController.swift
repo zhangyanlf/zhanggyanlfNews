@@ -13,7 +13,15 @@ class ZLMineViewController: UITableViewController {
 
     var sections = [[ZLMyCellModel]]()
     var attents = [ZLMyAttent]()
+    fileprivate lazy var headerView: ZLNoLoginHeaderView = {
+        let headerView = ZLNoLoginHeaderView.headerView()
+        return headerView
+    }()
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,11 +29,32 @@ class ZLMineViewController: UITableViewController {
         // Do any additional setup after loading the view.
         self.view.backgroundColor = UIColor.white
         tableView.tableFooterView = UIView()
+        tableView.tableHeaderView = headerView
         tableView.backgroundColor = UIColor.globalBackgroundColor()
         tableView.separatorStyle = .none
+        
         tableView.zl_registerCell(cell: ZLMyOtherCell.self)
         tableView.zl_registerCell(cell: ZLAttentCell.self)
+        loadData()
         
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: false)
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+
+    
+}
+
+extension ZLMineViewController {
+    ///加载数据
+    func loadData() {
         NetWorkTool.loadMyCellData { (sections) in
             let string = "{\"text\": \"我的关注\", \"grey_text\": \"\"}"
             let myAttent = ZLMyCellModel.deserialize(from: string)
@@ -43,21 +72,19 @@ class ZLMineViewController: UITableViewController {
             
         }
     }
-    
-
-    
 }
 
 
 extension ZLMineViewController {
-    
+    // 每组头部的高度
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return section == 1 ? 0 : 10
     }
-    
+    // 每组头部视图
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 10))
-        view.backgroundColor = UIColor.globalBackgroundColor()
+        
+        view.theme_backgroundColor = "colors.tableViewBackgroundColor"
         return view
     }
     
@@ -97,7 +124,7 @@ extension ZLMineViewController {
         return cell
         
     }
-    
+    // 行高
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 0 && indexPath.row == 0 {
             return (attents.count == 0 || attents.count == 1) ? 40 : 114
@@ -109,5 +136,15 @@ extension ZLMineViewController {
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
-    
+    //这只吸顶效果
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        let offsetY = scrollView.contentOffset.y
+        if offsetY < 0 {
+            let totalOffset = zlMyHeaderViewHeight + abs(offsetY)
+            let f = totalOffset / zlMyHeaderViewHeight
+            headerView.bgImageView.frame = CGRect(x: -screenWidth * (f - 1) * 0.5, y: offsetY, width: screenWidth * f, height: totalOffset)
+        }
+        
+    }
+
 }
