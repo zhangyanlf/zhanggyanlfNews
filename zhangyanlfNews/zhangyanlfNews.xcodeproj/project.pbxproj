@@ -14,6 +14,10 @@
 		A448606B21A3A50500CD1941 /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A448606A21A3A50500CD1941 /* SettingModel.swift */; };
 		A448606E21A3ABF300CD1941 /* ZLSettingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A448606C21A3ABF300CD1941 /* ZLSettingCell.swift */; };
 		A448606F21A3ABF300CD1941 /* ZLSettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A448606D21A3ABF300CD1941 /* ZLSettingCell.xib */; };
+		A448607421A3FBF200CD1941 /* ZLOffLineDownLoadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A448607221A3FBF200CD1941 /* ZLOffLineDownLoadCell.swift */; };
+		A448607521A3FBF200CD1941 /* ZLOffLineDownLoadCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A448607321A3FBF200CD1941 /* ZLOffLineDownLoadCell.xib */; };
+		A448607721A3FD8100CD1941 /* ZLOfflineDownloadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A448607621A3FD8100CD1941 /* ZLOfflineDownloadViewController.swift */; };
+		A448607921A4004B00CD1941 /* HomeNewsTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A448607821A4004B00CD1941 /* HomeNewsTitle.swift */; };
 		A49ABE6D219BB7B000E63CF9 /* NetWorkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49ABE6C219BB7B000E63CF9 /* NetWorkTool.swift */; };
 		A49ABE6F219BC17000E63CF9 /* ZLMyCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49ABE6E219BC17000E63CF9 /* ZLMyCellModel.swift */; };
 		A49ABE72219BD1C600E63CF9 /* ZLMyOtherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49ABE70219BD1C600E63CF9 /* ZLMyOtherCell.swift */; };
@@ -74,6 +78,10 @@
 		A448606A21A3A50500CD1941 /* SettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
 		A448606C21A3ABF300CD1941 /* ZLSettingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLSettingCell.swift; sourceTree = "<group>"; };
 		A448606D21A3ABF300CD1941 /* ZLSettingCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZLSettingCell.xib; sourceTree = "<group>"; };
+		A448607221A3FBF200CD1941 /* ZLOffLineDownLoadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLOffLineDownLoadCell.swift; sourceTree = "<group>"; };
+		A448607321A3FBF200CD1941 /* ZLOffLineDownLoadCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZLOffLineDownLoadCell.xib; sourceTree = "<group>"; };
+		A448607621A3FD8100CD1941 /* ZLOfflineDownloadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLOfflineDownloadViewController.swift; sourceTree = "<group>"; };
+		A448607821A4004B00CD1941 /* HomeNewsTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNewsTitle.swift; sourceTree = "<group>"; };
 		A49ABE6C219BB7B000E63CF9 /* NetWorkTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkTool.swift; sourceTree = "<group>"; };
 		A49ABE6E219BC17000E63CF9 /* ZLMyCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLMyCellModel.swift; sourceTree = "<group>"; };
 		A49ABE70219BD1C600E63CF9 /* ZLMyOtherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLMyOtherCell.swift; sourceTree = "<group>"; };
@@ -199,6 +207,7 @@
 		A4C5D118219A796800B9F4C1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A448607821A4004B00CD1941 /* HomeNewsTitle.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -327,6 +336,7 @@
 				A44072BA21A249CC0062FD09 /* ZLMoreLoginViewController.swift */,
 				A44072BC21A24A150062FD09 /* ZLMoreLoginViewController.storyboard */,
 				A430A62921A2A6AF009F1D15 /* ZLSystemSetupController.swift */,
+				A448607621A3FD8100CD1941 /* ZLOfflineDownloadViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -353,6 +363,8 @@
 				A49ABE82219C1FC000E63CF9 /* ZLNoLoginHeaderView.xib */,
 				A448606C21A3ABF300CD1941 /* ZLSettingCell.swift */,
 				A448606D21A3ABF300CD1941 /* ZLSettingCell.xib */,
+				A448607221A3FBF200CD1941 /* ZLOffLineDownLoadCell.swift */,
+				A448607321A3FBF200CD1941 /* ZLOffLineDownLoadCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -568,6 +580,7 @@
 				A49ABE73219BD1C600E63CF9 /* ZLMyOtherCell.xib in Resources */,
 				A4ED4AB32194184000A5E81C /* LaunchScreen.storyboard in Resources */,
 				A44072BD21A24A150062FD09 /* ZLMoreLoginViewController.storyboard in Resources */,
+				A448607521A3FBF200CD1941 /* ZLOffLineDownLoadCell.xib in Resources */,
 				A430A62C21A2B8AB009F1D15 /* settingPlist.plist in Resources */,
 				A4C65686219D3FDB00E8E118 /* default_theme.plist in Resources */,
 				A4ED4AB02194184000A5E81C /* Assets.xcassets in Resources */,
@@ -660,6 +673,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A448607721A3FD8100CD1941 /* ZLOfflineDownloadViewController.swift in Sources */,
 				A4C5D138219A796800B9F4C1 /* ZLMineViewController.swift in Sources */,
 				A4C5D136219A796800B9F4C1 /* AppDelegate.swift in Sources */,
 				A4C5D134219A796800B9F4C1 /* ZLVideoViewController.swift in Sources */,
@@ -667,10 +681,12 @@
 				A448606E21A3ABF300CD1941 /* ZLSettingCell.swift in Sources */,
 				A49ABE7B219BF6F200E63CF9 /* UIKit+Extension.swift in Sources */,
 				A448606B21A3A50500CD1941 /* SettingModel.swift in Sources */,
+				A448607421A3FBF200CD1941 /* ZLOffLineDownLoadCell.swift in Sources */,
 				A4C5D133219A796800B9F4C1 /* ZLHomeViewController.swift in Sources */,
 				A4C5D139219A796800B9F4C1 /* ZLNewsNavigationController.swift in Sources */,
 				A4C5D13A219A796800B9F4C1 /* ZLMyTabController.swift in Sources */,
 				A430A62A21A2A6AF009F1D15 /* ZLSystemSetupController.swift in Sources */,
+				A448607921A4004B00CD1941 /* HomeNewsTitle.swift in Sources */,
 				A49ABE76219BEDBF00E63CF9 /* ZLAttentCell.swift in Sources */,
 				A49ABE6F219BC17000E63CF9 /* ZLMyCellModel.swift in Sources */,
 				A49ABE72219BD1C600E63CF9 /* ZLMyOtherCell.swift in Sources */,
