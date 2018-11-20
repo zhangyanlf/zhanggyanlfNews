@@ -48,8 +48,7 @@ class ZLNoLoginHeaderView: UIView {
         effactX.minimumRelativeValue = -20
         effactX.maximumRelativeValue = 20
         stackView.addMotionEffect(effactX)
-        ThemeManager.setTheme(plistName: "default_theme", path: .mainBundle)
-        
+        //ThemeManager.setTheme(plistName: "default_theme", path: .mainBundle)
         /// 设置主题
         mobileButton.theme_setImage("images.loginMobileButton", forState: .normal)
         weChatButton.theme_setImage("images.loginWechatButton", forState: .normal)

@@ -96,7 +96,10 @@ class ZLMyTabController: UITabBarController {
         childController.title = title
         //添加导航控制器为 TabBar子控制器
         addChild(ZLNewsNavigationController(rootViewController: childController))
-       
         
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
 }

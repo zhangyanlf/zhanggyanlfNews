@@ -7,10 +7,17 @@
 //
 
 import UIKit
+import RxCocoa
+import RxSwift
+
+
+
 let zlMyOtherCell: String = "zlMyOtherCell"
 let zlAttentCell: String = "zlAttentCell"
 class ZLMineViewController: UITableViewController {
 
+    private let disposeBag = DisposeBag()
+    
     var sections = [[ZLMyCellModel]]()
     var attents = [ZLMyAttent]()
     fileprivate lazy var headerView: ZLNoLoginHeaderView = {
@@ -71,7 +78,18 @@ extension ZLMineViewController {
             })
             
         }
+        
+        headerView.moreButton.rx.controlEvent(.touchUpInside)
+            .subscribe(onNext: { [weak self] in
+                let stodryboard = UIStoryboard(name: "ZLMoreLoginViewController", bundle: nil)
+                let moreLogin = stodryboard.instantiateViewController(withIdentifier: "ZLMoreLoginViewController") as! ZLMoreLoginViewController
+                moreLogin.modalSize = (width: .full, height: .custom(size: Float(screenHeight - (isIPhoneX ? 44 : 20))))
+                
+                self!.present(moreLogin, animated: true, completion: nil)
+            })
+            .disposed(by: disposeBag)
     }
+        
 }
 
 
@@ -134,6 +152,11 @@ extension ZLMineViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        if indexPath.section == 3 && indexPath.row == 1 { //跳转系统设置界面
+            let systemSVC = ZLSystemSetupController()
+            self.navigationController?.pushViewController(systemSVC, animated: true)
+            
+        }
     }
     
     //这只吸顶效果

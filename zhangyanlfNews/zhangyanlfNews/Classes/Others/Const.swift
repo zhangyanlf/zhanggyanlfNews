@@ -24,4 +24,5 @@ let iid: Int = 5034850950
 let zlMyHeaderViewHeight: CGFloat = 280
 
 let isNight = "isNight"
-
+///判断 iPhone X
+let isIPhoneX: Bool = screenHeight == 812 ? true : false

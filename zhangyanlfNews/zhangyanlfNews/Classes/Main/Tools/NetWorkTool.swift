@@ -11,7 +11,7 @@ import Alamofire
 import SwiftyJSON
 
 protocol NetWorkToolProtocol {
-    //------------Mine------
+    //------------Mine--------------------------
     ///获取我的界面cell数据
     static func loadMyCellData(completionCallBack:@escaping(_ sections:[[ZLMyCellModel]]) -> ())
     /// 获取我的关注数据
@@ -20,7 +20,7 @@ protocol NetWorkToolProtocol {
 }
 
 extension NetWorkToolProtocol {
-     //------------Mine------
+     //------------Mine------------------------------------
     ///获取我的界面cell数据
     static func loadMyCellData(completionCallBack:@escaping (_ sections:[[ZLMyCellModel]]) -> ()) {
         

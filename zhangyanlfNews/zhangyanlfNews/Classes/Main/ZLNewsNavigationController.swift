@@ -12,19 +12,24 @@ class ZLNewsNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let navigationBar = UINavigationBar.appearance()
+        navigationBar.theme_tintColor = "colors.black"
+        navigationBar.theme_barTintColor = "colors.cellBackgroundColor"
 
-        // Do any additional setup after loading the view.
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // 拦截 push 操作
+    override func pushViewController(_ viewController: UIViewController, animated: Bool) {
+        if viewControllers.count > 0 {
+            viewController.hidesBottomBarWhenPushed = true
+            viewController.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "lefterbackicon_titlebar_24x24_"), style: .plain, target: self, action: #selector(navigationBack))
+        }
+        super.pushViewController(viewController, animated: true)
     }
-    */
+    
+    @objc func navigationBack() {
+        popViewController(animated: true)
+    }
 
 }

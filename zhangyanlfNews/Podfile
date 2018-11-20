@@ -9,6 +9,8 @@ target 'zhangyanlfNews' do
   pod 'Kingfisher'
   pod 'IBAnimatable'
   pod 'SwiftTheme'
+  pod 'RxSwift'
+  pod 'RxCocoa'
   use_frameworks!
 
 end
