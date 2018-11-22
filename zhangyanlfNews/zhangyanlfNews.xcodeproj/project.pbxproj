@@ -47,6 +47,8 @@
 		A4ED4AB32194184000A5E81C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4ED4AB12194184000A5E81C /* LaunchScreen.storyboard */; };
 		A4ED4ABE2194184000A5E81C /* zhangyanlfNewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ED4ABD2194184000A5E81C /* zhangyanlfNewsTests.swift */; };
 		A4ED4AC92194184000A5E81C /* zhangyanlfNewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ED4AC82194184000A5E81C /* zhangyanlfNewsUITests.swift */; };
+		A4FDF75021A5375A00202DDB /* SQliteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FDF74F21A5375A00202DDB /* SQliteManager.swift */; };
+		A4FDF75221A537A200202DDB /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A4FDF75121A537A200202DDB /* libsqlite3.tbd */; };
 		C19D67ED1B3EC167959B497A /* Pods_zhangyanlfNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C844C24B2273CB3BDD3DF4C6 /* Pods_zhangyanlfNews.framework */; };
 /* End PBXBuildFile section */
 
@@ -117,6 +119,8 @@
 		A4ED4AC42194184000A5E81C /* zhangyanlfNewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = zhangyanlfNewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4ED4AC82194184000A5E81C /* zhangyanlfNewsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zhangyanlfNewsUITests.swift; sourceTree = "<group>"; };
 		A4ED4ACA2194184000A5E81C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4FDF74F21A5375A00202DDB /* SQliteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQliteManager.swift; sourceTree = "<group>"; };
+		A4FDF75121A537A200202DDB /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		B5F03EC2BA66D5637A1FE527 /* Pods_zhangyanlfNewsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_zhangyanlfNewsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C844C24B2273CB3BDD3DF4C6 /* Pods_zhangyanlfNews.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_zhangyanlfNews.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -126,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4FDF75221A537A200202DDB /* libsqlite3.tbd in Frameworks */,
 				C19D67ED1B3EC167959B497A /* Pods_zhangyanlfNews.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -161,6 +166,7 @@
 			children = (
 				A49ABE6C219BB7B000E63CF9 /* NetWorkTool.swift */,
 				A4C65682219D1DBC00E8E118 /* MyTheme.swift */,
+				A4FDF74F21A5375A00202DDB /* SQliteManager.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -461,6 +467,7 @@
 		EB6A46BC0A369B6A40C2D2BE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A4FDF75121A537A200202DDB /* libsqlite3.tbd */,
 				C844C24B2273CB3BDD3DF4C6 /* Pods_zhangyanlfNews.framework */,
 				6C2C714F6852CE7E2B13D194 /* Pods_zhangyanlfNewsTests.framework */,
 				B5F03EC2BA66D5637A1FE527 /* Pods_zhangyanlfNewsUITests.framework */,
@@ -623,6 +630,7 @@
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SQLite.swift/SQLite.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftTheme/SwiftTheme.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
@@ -636,6 +644,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SQLite.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftTheme.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
@@ -696,6 +705,7 @@
 				A49ABE81219C1FAF00E63CF9 /* ZLNoLoginHeaderView.swift in Sources */,
 				A4C5D140219ABDE400B9F4C1 /* Const.swift in Sources */,
 				A4C65683219D1DBC00E8E118 /* MyTheme.swift in Sources */,
+				A4FDF75021A5375A00202DDB /* SQliteManager.swift in Sources */,
 				A4C5D143219ABF5700B9F4C1 /* UIColor+Extension.swift in Sources */,
 				A49ABE6D219BB7B000E63CF9 /* NetWorkTool.swift in Sources */,
 			);

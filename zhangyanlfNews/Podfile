@@ -11,6 +11,7 @@ target 'zhangyanlfNews' do
   pod 'SwiftTheme'
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'SQLite.swift'
   use_frameworks!
 
 end

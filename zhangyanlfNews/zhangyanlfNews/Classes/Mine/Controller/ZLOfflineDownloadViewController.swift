@@ -12,6 +12,7 @@ class ZLOfflineDownloadViewController: UITableViewController {
 
     var homeTitles = [ZLHomeNewsTitle]()
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -24,7 +25,7 @@ class ZLOfflineDownloadViewController: UITableViewController {
         let view = UIView(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 44))
         
         view.theme_backgroundColor = "colors.tableViewBackgroundColor"
-        let label = UILabel(frame: CGRect(x: 15, y: 0, width: screenWidth, height: 44))
+        let label = UILabel(frame: CGRect(x: 20, y: 0, width: screenWidth, height: 44))
         label.text = "我的频道"
         let separatorView = UIView(frame: CGRect(x: 0, y: 43, width: screenWidth, height: 1))
         separatorView.theme_backgroundColor = "colors.separatorViewColor"
@@ -36,7 +37,6 @@ class ZLOfflineDownloadViewController: UITableViewController {
 
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return self.homeTitles.count
     }
 
@@ -45,6 +45,23 @@ class ZLOfflineDownloadViewController: UITableViewController {
         let cell = tableView.zl_dequeueReusableCell(indexPath: indexPath) as ZLOffLineDownLoadCell
         cell.titles = homeTitles[indexPath.row]
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // 取出数组中的第 row 个对象
+        var homeNewsTitle = homeTitles[indexPath.row]
+        // 取反
+        homeNewsTitle.selected = !homeNewsTitle.selected
+        // 取出 第 row 个 cell
+        let cell = tableView.cellForRow(at: indexPath) as! ZLOffLineDownLoadCell
+        // 改变 cell 的图片
+        cell.rightImageView.theme_image = homeNewsTitle.selected ? "images.air_download_option_press" : "images.air_download_option"
+        // 替换数组中的数据
+        homeTitles[indexPath.row] = homeNewsTitle
+        // 更新数据库中的数据
+        NewsTitleTable().update(homeNewsTitle)
+        //tableView.reloadRows(at: [indexPath], with: .none)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
     
 }
@@ -59,9 +76,8 @@ extension ZLOfflineDownloadViewController {
         tableView.theme_separatorColor = "colors.separatorViewColor"
         tableView.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         tableView.theme_backgroundColor = "colors.tableViewBackgroundColor"
-        NetWorkTool.loadHomeTitleData { (homeTitles) in
-            self.homeTitles = homeTitles
-            self.tableView.reloadData()
-        }
+
+        //从数据库中取出所有title数据
+        homeTitles = NewsTitleTable().seleactAll()
     }
 }

@@ -34,10 +34,6 @@ struct ZLSettingModel: HandyJSON {
     var isHiddenRightArraw = true
     var isHiddenSwitch = true
     
-    
-    
-    
-    
-    
-    
 }
+
+
