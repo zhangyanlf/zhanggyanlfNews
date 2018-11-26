@@ -35,6 +35,52 @@ struct ZLMyAttent : HandyJSON{
     var user_auth_info = UserAuthInfo()
 }
 
+struct ZLMiddleImage: HandyJSON {
+    var type = ZLImageType.normal
+    var height: CGFloat = 0
+    
+    var url_list = [ZLURLList]()
+    
+    var url: NSString = ""
+    var urlString: String {
+        guard url.hasSuffix(".webp") else { return url as String }
+        return url.replacingCharacters(in: NSRange(location: url.length - 5, length: 5), with: ".png")
+    }
+    var width: CGFloat = 0
+    
+    var uri: String = ""
+    /// 宽高比
+    var ratio: CGFloat? { return width / height }
+    
+}
+
+/// 图片的类型
+enum ZLImageType: Int, HandyJSONEnum {
+    case normal = 1     // 一般图片
+    case gif = 2        // gif 图
+}
+
+struct ZLImageList: HandyJSON {
+    var type = ZLImageType.normal
+    
+    var height: CGFloat = 0
+    
+    var url_list = [ZLURLList]()
+    
+    var url: NSString = ""
+    var urlString: String {
+        guard url.hasSuffix(".webp") else { return url as String }
+        return url.replacingCharacters(in: NSRange(location: url.length - 5, length: 5), with: ".png")
+    }
+    var width: CGFloat = 0
+    
+    var uri: String = ""
+    /// 宽高比
+    var ratio: CGFloat? { return width / height }
+    
+}
+
+
 struct UserAuthInfo: HandyJSON {
     var auth_type: Int = 0
     var auth_info: String = ""

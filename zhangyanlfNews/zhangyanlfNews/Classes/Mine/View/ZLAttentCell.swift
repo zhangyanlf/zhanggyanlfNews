@@ -10,6 +10,8 @@ import UIKit
 
 class ZLAttentCell: UITableViewCell, RegisterCellFromNib {
 
+    /// 点击了第几个 cell
+    var myConcernSelected: ((_ myAttent: ZLMyAttent)->())?
     ///标题
     @IBOutlet weak var leftLabel: UILabel!
     ///副标题
@@ -83,6 +85,11 @@ extension ZLAttentCell: UICollectionViewDelegate, UICollectionViewDataSource {
         let cell = collectionView.zl_dequeueReusableCell(indexPath: indexPath) as ZLConcernCell
         cell.zlMyConcern = attents[indexPath.row]
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        myConcernSelected!(attents[indexPath.item])
+        
     }
 }
 

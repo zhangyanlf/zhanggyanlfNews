@@ -46,7 +46,7 @@
                 <outlet property="rightImageView" destination="k1O-6N-aWM" id="fJm-j3-EGK"/>
                 <outlet property="titleLabel" destination="1eJ-Ln-wzE" id="a7s-lQ-EUV"/>
             </connections>
-            <point key="canvasLocation" x="-226" y="47"/>
+            <point key="canvasLocation" x="-258" y="46"/>
         </tableViewCell>
     </objects>
     <resources>

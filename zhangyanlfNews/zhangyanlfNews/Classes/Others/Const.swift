@@ -26,3 +26,8 @@ let zlMyHeaderViewHeight: CGFloat = 280
 let isNight = "isNight"
 ///判断 iPhone X
 let isIPhoneX: Bool = screenHeight == 812 ? true : false
+
+
+let image1Width: CGFloat = screenWidth * 0.5
+let image2Width: CGFloat = (screenWidth - 35) * 0.5
+let image3Width: CGFloat = (screenWidth - 40) / 3

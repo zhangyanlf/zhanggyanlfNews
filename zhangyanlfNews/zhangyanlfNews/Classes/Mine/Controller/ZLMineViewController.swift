@@ -115,6 +115,7 @@ extension ZLMineViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+       
         if indexPath.section == 0 && indexPath.row == 0 {
             let cell = tableView.zl_dequeueReusableCell(indexPath: indexPath) as ZLAttentCell
 
@@ -124,11 +125,12 @@ extension ZLMineViewController {
             if sections.count == 0 || sections.count == 1 {
                 cell.attentCollectionView.isHidden = true
             }
-            if sections.count == 1 {
-                cell.zlMyAtten = attents[0]
-            }
-            if sections.count > 1 {
-                cell.attents = attents
+            if sections.count == 1 { cell.zlMyAtten = attents[0] }
+            if sections.count > 1 { cell.attents = attents }
+            cell.myConcernSelected = { [weak self] (myAttent) in
+                let userDetailVC = ZLUserDetailController()
+                userDetailVC.userId = myAttent.userid
+                self?.navigationController?.pushViewController(userDetailVC, animated: true)
             }
            
             return cell

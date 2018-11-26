@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A424750B21A64CF9007CB22E /* ZLUserDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A424750921A64CF9007CB22E /* ZLUserDetailController.swift */; };
+		A424750C21A64CF9007CB22E /* ZLUserDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A424750A21A64CF9007CB22E /* ZLUserDetailController.xib */; };
+		A424750E21A65C06007CB22E /* ZLUserDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A424750D21A65C06007CB22E /* ZLUserDetailHeaderView.swift */; };
+		A424751021A65C17007CB22E /* ZLUserDetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A424750F21A65C17007CB22E /* ZLUserDetailHeaderView.xib */; };
 		A430A62A21A2A6AF009F1D15 /* ZLSystemSetupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430A62921A2A6AF009F1D15 /* ZLSystemSetupController.swift */; };
 		A430A62C21A2B8AB009F1D15 /* settingPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = A430A62B21A2B8AA009F1D15 /* settingPlist.plist */; };
 		A44072BB21A249CC0062FD09 /* ZLMoreLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44072BA21A249CC0062FD09 /* ZLMoreLoginViewController.swift */; };
@@ -42,6 +46,10 @@
 		A4C65683219D1DBC00E8E118 /* MyTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C65682219D1DBC00E8E118 /* MyTheme.swift */; };
 		A4C65686219D3FDB00E8E118 /* default_theme.plist in Resources */ = {isa = PBXBuildFile; fileRef = A4C65685219D3FDB00E8E118 /* default_theme.plist */; };
 		A4C65688219D400700E8E118 /* night_theme.plist in Resources */ = {isa = PBXBuildFile; fileRef = A4C65687219D400700E8E118 /* night_theme.plist */; };
+		A4E9374121AB92C800C58810 /* ZLUserDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E9374021AB92C800C58810 /* ZLUserDetail.swift */; };
+		A4E9374321AB94CE00C58810 /* ZLCalculate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E9374221AB94CE00C58810 /* ZLCalculate.swift */; };
+		A4E9374521AB95DC00C58810 /* Foundation+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E9374421AB95DC00C58810 /* Foundation+Extension.swift */; };
+		A4E9374721AB962C00C58810 /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4E9374621AB962C00C58810 /* Emoji.swift */; };
 		A4ED4AAE2194183F00A5E81C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4ED4AAC2194183F00A5E81C /* Main.storyboard */; };
 		A4ED4AB02194184000A5E81C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4ED4AAF2194184000A5E81C /* Assets.xcassets */; };
 		A4ED4AB32194184000A5E81C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4ED4AB12194184000A5E81C /* LaunchScreen.storyboard */; };
@@ -73,6 +81,10 @@
 		1D0142615FE36A4DD60E411F /* Pods-zhangyanlfNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zhangyanlfNews.release.xcconfig"; path = "Pods/Target Support Files/Pods-zhangyanlfNews/Pods-zhangyanlfNews.release.xcconfig"; sourceTree = "<group>"; };
 		43208B121A8FD6EA95A7DF53 /* Pods-zhangyanlfNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zhangyanlfNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-zhangyanlfNews/Pods-zhangyanlfNews.debug.xcconfig"; sourceTree = "<group>"; };
 		6C2C714F6852CE7E2B13D194 /* Pods_zhangyanlfNewsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_zhangyanlfNewsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A424750921A64CF9007CB22E /* ZLUserDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLUserDetailController.swift; sourceTree = "<group>"; };
+		A424750A21A64CF9007CB22E /* ZLUserDetailController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZLUserDetailController.xib; sourceTree = "<group>"; };
+		A424750D21A65C06007CB22E /* ZLUserDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLUserDetailHeaderView.swift; sourceTree = "<group>"; };
+		A424750F21A65C17007CB22E /* ZLUserDetailHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZLUserDetailHeaderView.xib; sourceTree = "<group>"; };
 		A430A62921A2A6AF009F1D15 /* ZLSystemSetupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLSystemSetupController.swift; sourceTree = "<group>"; };
 		A430A62B21A2B8AA009F1D15 /* settingPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = settingPlist.plist; sourceTree = "<group>"; };
 		A44072BA21A249CC0062FD09 /* ZLMoreLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLMoreLoginViewController.swift; sourceTree = "<group>"; };
@@ -109,6 +121,10 @@
 		A4C65682219D1DBC00E8E118 /* MyTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTheme.swift; sourceTree = "<group>"; };
 		A4C65685219D3FDB00E8E118 /* default_theme.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = default_theme.plist; sourceTree = "<group>"; };
 		A4C65687219D400700E8E118 /* night_theme.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = night_theme.plist; sourceTree = "<group>"; };
+		A4E9374021AB92C800C58810 /* ZLUserDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLUserDetail.swift; sourceTree = "<group>"; };
+		A4E9374221AB94CE00C58810 /* ZLCalculate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLCalculate.swift; sourceTree = "<group>"; };
+		A4E9374421AB95DC00C58810 /* Foundation+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Foundation+Extension.swift"; sourceTree = "<group>"; };
+		A4E9374621AB962C00C58810 /* Emoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
 		A4ED4AA52194183F00A5E81C /* zhangyanlfNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zhangyanlfNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4ED4AAD2194183F00A5E81C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A4ED4AAF2194184000A5E81C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -167,6 +183,8 @@
 				A49ABE6C219BB7B000E63CF9 /* NetWorkTool.swift */,
 				A4C65682219D1DBC00E8E118 /* MyTheme.swift */,
 				A4FDF74F21A5375A00202DDB /* SQliteManager.swift */,
+				A4E9374221AB94CE00C58810 /* ZLCalculate.swift */,
+				A4E9374621AB962C00C58810 /* Emoji.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -343,6 +361,8 @@
 				A44072BC21A24A150062FD09 /* ZLMoreLoginViewController.storyboard */,
 				A430A62921A2A6AF009F1D15 /* ZLSystemSetupController.swift */,
 				A448607621A3FD8100CD1941 /* ZLOfflineDownloadViewController.swift */,
+				A424750921A64CF9007CB22E /* ZLUserDetailController.swift */,
+				A424750A21A64CF9007CB22E /* ZLUserDetailController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -352,6 +372,7 @@
 			children = (
 				A49ABE6E219BC17000E63CF9 /* ZLMyCellModel.swift */,
 				A448606A21A3A50500CD1941 /* SettingModel.swift */,
+				A4E9374021AB92C800C58810 /* ZLUserDetail.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -371,6 +392,8 @@
 				A448606D21A3ABF300CD1941 /* ZLSettingCell.xib */,
 				A448607221A3FBF200CD1941 /* ZLOffLineDownLoadCell.swift */,
 				A448607321A3FBF200CD1941 /* ZLOffLineDownLoadCell.xib */,
+				A424750D21A65C06007CB22E /* ZLUserDetailHeaderView.swift */,
+				A424750F21A65C17007CB22E /* ZLUserDetailHeaderView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -400,6 +423,7 @@
 			children = (
 				A4C5D142219ABF5700B9F4C1 /* UIColor+Extension.swift */,
 				A49ABE7A219BF6F200E63CF9 /* UIKit+Extension.swift */,
+				A4E9374421AB95DC00C58810 /* Foundation+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -583,7 +607,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A49ABE7F219C082000E63CF9 /* ZLConcernCell.xib in Resources */,
+				A424750C21A64CF9007CB22E /* ZLUserDetailController.xib in Resources */,
 				A49ABE83219C1FC000E63CF9 /* ZLNoLoginHeaderView.xib in Resources */,
+				A424751021A65C17007CB22E /* ZLUserDetailHeaderView.xib in Resources */,
 				A49ABE73219BD1C600E63CF9 /* ZLMyOtherCell.xib in Resources */,
 				A4ED4AB32194184000A5E81C /* LaunchScreen.storyboard in Resources */,
 				A44072BD21A24A150062FD09 /* ZLMoreLoginViewController.storyboard in Resources */,
@@ -682,10 +708,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4E9374121AB92C800C58810 /* ZLUserDetail.swift in Sources */,
 				A448607721A3FD8100CD1941 /* ZLOfflineDownloadViewController.swift in Sources */,
+				A4E9374321AB94CE00C58810 /* ZLCalculate.swift in Sources */,
 				A4C5D138219A796800B9F4C1 /* ZLMineViewController.swift in Sources */,
 				A4C5D136219A796800B9F4C1 /* AppDelegate.swift in Sources */,
+				A424750E21A65C06007CB22E /* ZLUserDetailHeaderView.swift in Sources */,
 				A4C5D134219A796800B9F4C1 /* ZLVideoViewController.swift in Sources */,
+				A4E9374521AB95DC00C58810 /* Foundation+Extension.swift in Sources */,
 				A4C5D13E219AA84300B9F4C1 /* ZLMyTabBar.swift in Sources */,
 				A448606E21A3ABF300CD1941 /* ZLSettingCell.swift in Sources */,
 				A49ABE7B219BF6F200E63CF9 /* UIKit+Extension.swift in Sources */,
@@ -704,6 +734,8 @@
 				A49ABE7E219C082000E63CF9 /* ZLConcernCell.swift in Sources */,
 				A49ABE81219C1FAF00E63CF9 /* ZLNoLoginHeaderView.swift in Sources */,
 				A4C5D140219ABDE400B9F4C1 /* Const.swift in Sources */,
+				A4E9374721AB962C00C58810 /* Emoji.swift in Sources */,
+				A424750B21A64CF9007CB22E /* ZLUserDetailController.swift in Sources */,
 				A4C65683219D1DBC00E8E118 /* MyTheme.swift in Sources */,
 				A4FDF75021A5375A00202DDB /* SQliteManager.swift in Sources */,
 				A4C5D143219ABF5700B9F4C1 /* UIColor+Extension.swift in Sources */,
