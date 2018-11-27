@@ -10,7 +10,7 @@ import UIKit
 import IBAnimatable
 import SwiftTheme
 
-class ZLNoLoginHeaderView: UIView {
+class ZLNoLoginHeaderView: UIView, NibLoadable {
     ///背景图片
     @IBOutlet weak var bgImageView: UIImageView!
     ///手机登录按钮
@@ -34,10 +34,7 @@ class ZLNoLoginHeaderView: UIView {
     
     @IBOutlet weak var bottomView: UIView!
     
-    class func headerView() -> ZLNoLoginHeaderView {
-        return Bundle.main.loadNibNamed("\(self)", owner: nil, options: nil
-        )?.last as! ZLNoLoginHeaderView
-    }
+   
     
     override func awakeFromNib() {
         super.awakeFromNib()

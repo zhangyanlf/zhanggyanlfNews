@@ -10,7 +10,7 @@ import UIKit
 import IBAnimatable
 import Kingfisher
 
-class ZLUserDetailHeaderView: UIView {
+class ZLUserDetailHeaderView: UIView, NibLoadable {
 
     @IBOutlet weak var backgroundImageView: UIImageView!
     /// 背景图片顶部约束
@@ -66,6 +66,16 @@ class ZLUserDetailHeaderView: UIView {
     /// 底部的 ScrollView
     @IBOutlet weak var bottomScrollView: UIScrollView!
     
+    weak var privorButton = UIButton()
+    
+    /// 指示条
+    private lazy var indicatorView : UIView = {
+        let indicatorView = UIView(frame: CGRect(x: (topTabButtonWidth - topTabindicatorWidth) * 0.5 , y: topTabView.height - 3, width: topTabindicatorWidth, height: topTabindicatorHeight))
+        indicatorView.theme_backgroundColor = "colors.globalRedColor"
+        return indicatorView
+    }()
+    
+    
     var userDetail: ZLUserDetail? {
         didSet {
             backgroundImageView.kf.setImage(with: URL(string: (userDetail?.bg_img_url)!))
@@ -108,19 +118,90 @@ class ZLUserDetailHeaderView: UIView {
             //粉丝
             followingsCountLabel.text = userDetail!.followingsCount
             
+            
+            if userDetail!.top_tab.count > 0 {
+                //添加按钮和 tableView
+                for (index ,topTab) in userDetail!.top_tab.enumerated() {
+                    let button = UIButton(frame: CGRect(x: CGFloat(index) * topTabButtonWidth, y: 0, width: topTabButtonWidth, height: scrollView.frame.height))
+                    button.setTitle(topTab.show_name, for: .normal)
+                    button.titleLabel?.font = UIFont.systemFont(ofSize: 16)
+                    button.theme_setTitleColor("colors.black", forState: .normal)
+                    button.theme_setTitleColor("colors.globalRedColor", forState: .selected)
+                    button.addTarget(self, action: #selector(topTabButtonClicked), for: .touchUpInside)
+                    scrollView.addSubview(button)
+                    if index == 0 {
+                        button.isSelected = true
+                        privorButton = button
+                    }
+                    
+                    if index == userDetail!.top_tab.count - 1 {
+                        scrollView.contentSize = CGSize(width: button.frame.maxX, height: scrollView.height)
+
+                    }
+                }
+            }
+            scrollView.addSubview(indicatorView)
         }
     }
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        //concernButton.setTitle("关注", for: .normal)
-        //concernButton.setTitle("已关注", for: .selected)
-        
-        //concernButton.theme_setTitleColor("colors.userDetailConcernButtonTextColor", forState: .normal)
-        //concernButton.theme_setTitleColor("colors.userDetailConcernButtonSelectedTextColor", forState: .selected)
+        concernButton.setTitle("关注", for: .normal)
+        concernButton.setTitle("已关注", for: .selected)
+        // 设置主题颜色
+        theme_backgroundColor = "colors.cellBackgroundColor"
+        baseView.theme_backgroundColor = "colors.cellBackgroundColor"
+        avatarImageView.layer.theme_borderColor = "colors.cellBackgroundColor"
+        topTabView.theme_backgroundColor = "colors.cellBackgroundColor"
+        separatorView.theme_backgroundColor = "colors.separatorViewColor"
+        nameLabel.theme_textColor = "colors.black"
+        sendMailButton.theme_setTitleColor("colors.userDetailSendMailTextColor", forState: .normal)
+        unfoldButton.theme_setTitleColor("colors.userDetailSendMailTextColor", forState: .normal)
+        followersCountLabel.theme_textColor = "colors.userDetailSendMailTextColor"
+        followingsCountLabel.theme_textColor = "colors.userDetailSendMailTextColor"
+        concernButton.theme_setTitleColor("colors.userDetailConcernButtonTextColor", forState: .normal)
+        concernButton.theme_setTitleColor("colors.userDetailConcernButtonSelectedTextColor", forState: .selected)
+        verifiedAgencyLabel.theme_textColor = "colors.verifiedAgencyTextColor"
+        verifiedContentLabel.theme_textColor = "colors.black"
+        descriptionLabel.theme_textColor = "colors.black"
+        descriptionLabel.theme_textColor = "colors.black"
+        toutiaohaoImageView.theme_image = "images.toutiaohao"
+        areaButton.theme_setTitleColor("colors.black", forState: .normal)
     }
+    
+    /// 接收到了关注按钮的点击
+    @objc private func receivedConcernButtonClicked(notification: Notification) {
+        let userInfo = notification.userInfo as! [String: Any]
+        let isSelected = userInfo["isSelected"] as! Bool
+        concernButton.isSelected = isSelected
+        concernButton.theme_backgroundColor = isSelected ? "colors.userDetailFollowingConcernBtnBgColor" : "colors.globalRedColor"
+        concernButton.borderColor = isSelected ? .grayColor232() : .globalRedColor()
+        concernButton.borderWidth = isSelected ? 1 : 0
+    }
+    
+    
+   
+    
+    
+    
+}
+
+/// 点击动作
+extension ZLUserDetailHeaderView {
     /// 发私信
     @IBAction func sendMessageClick(_ sender: UIButton) {
+    }
+    
+    /// topTab 按钮点击方法
+    @objc func topTabButtonClicked(button: UIButton) {
+        privorButton?.isSelected = false
+        button.isSelected = !button.isSelected
+        UIView.animate(withDuration: 0.25, animations: {
+            self.indicatorView.centerX = button.centerX
+        }) { (_) in
+            self.privorButton = button
+        }
+        
     }
     
     /// 关注按钮
@@ -129,6 +210,7 @@ class ZLUserDetailHeaderView: UIView {
         if sender.isSelected { //已关注  点击取消关注
             NetWorkTool.loadRelationUnfollow(userId: userDetail!.user_id) { (_) in
                 sender.isSelected = !sender.isSelected
+                sender.theme_backgroundColor = "colors.globalRedColor"
                 self.recommendButton.isHidden = true
                 self.recommendButton.isSelected = false
                 self.recommendButtonTrailing.constant = 0
@@ -143,22 +225,23 @@ class ZLUserDetailHeaderView: UIView {
         } else { // 未关注  点击关注某个用户
             NetWorkTool.loadRelationFollow(userId: userDetail!.user_id) { (_) in
                 sender.isSelected = !sender.isSelected
-                //sender.theme_backgroundColor = "colors.userDetailFollowingConcernBtnBgColor"
-                //sender.borderColor = .grayColor232()
-                //sender.borderWidth = 1
+                sender.theme_backgroundColor = "colors.userDetailFollowingConcernBtnBgColor"
+                sender.borderColor = .grayColor232()
+                sender.borderWidth = 1
                 self.recommendButton.isHidden = false
                 self.recommendButton.isSelected = false
                 self.recommendButtonWidth.constant = 28.0
                 self.recommendButtonTrailing.constant = 15.0
                 self.recommendViewHeight.constant = 233
                 UIView.animate(withDuration: 0.25, animations: {
-                     self.layoutIfNeeded()
+                    self.layoutIfNeeded()
                 }, completion: { (_) in
                     //点击关注后  就会出现相关数据
                     NetWorkTool.loadRelationUserRecommend(userId: self.userDetail!.user_id, completionCallBack: { (userCards) in
                         
                     })
                 })
+                
             }
         }
     }
@@ -181,12 +264,4 @@ class ZLUserDetailHeaderView: UIView {
             self.layoutIfNeeded()
         })
     }
-    
-    ///自定义的推荐 View
-    class func detailHeaderView() -> ZLUserDetailHeaderView {
-        return Bundle.main.loadNibNamed("\(self)", owner: nil, options: nil)?.last as! ZLUserDetailHeaderView
-    }
-    
 }
-
-

@@ -21,7 +21,7 @@ class ZLMineViewController: UITableViewController {
     var sections = [[ZLMyCellModel]]()
     var attents = [ZLMyAttent]()
     fileprivate lazy var headerView: ZLNoLoginHeaderView = {
-        let headerView = ZLNoLoginHeaderView.headerView()
+        let headerView = ZLNoLoginHeaderView.loadViewFromNib()
         return headerView
     }()
     

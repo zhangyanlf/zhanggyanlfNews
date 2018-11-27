@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A40C10BE21AD2DB2007DAD21 /* ZLUserDetailBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40C10BD21AD2DB2007DAD21 /* ZLUserDetailBottomView.swift */; };
 		A424750B21A64CF9007CB22E /* ZLUserDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A424750921A64CF9007CB22E /* ZLUserDetailController.swift */; };
 		A424750C21A64CF9007CB22E /* ZLUserDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A424750A21A64CF9007CB22E /* ZLUserDetailController.xib */; };
 		A424750E21A65C06007CB22E /* ZLUserDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A424750D21A65C06007CB22E /* ZLUserDetailHeaderView.swift */; };
@@ -81,6 +82,7 @@
 		1D0142615FE36A4DD60E411F /* Pods-zhangyanlfNews.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zhangyanlfNews.release.xcconfig"; path = "Pods/Target Support Files/Pods-zhangyanlfNews/Pods-zhangyanlfNews.release.xcconfig"; sourceTree = "<group>"; };
 		43208B121A8FD6EA95A7DF53 /* Pods-zhangyanlfNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zhangyanlfNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-zhangyanlfNews/Pods-zhangyanlfNews.debug.xcconfig"; sourceTree = "<group>"; };
 		6C2C714F6852CE7E2B13D194 /* Pods_zhangyanlfNewsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_zhangyanlfNewsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A40C10BD21AD2DB2007DAD21 /* ZLUserDetailBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLUserDetailBottomView.swift; sourceTree = "<group>"; };
 		A424750921A64CF9007CB22E /* ZLUserDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLUserDetailController.swift; sourceTree = "<group>"; };
 		A424750A21A64CF9007CB22E /* ZLUserDetailController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZLUserDetailController.xib; sourceTree = "<group>"; };
 		A424750D21A65C06007CB22E /* ZLUserDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLUserDetailHeaderView.swift; sourceTree = "<group>"; };
@@ -394,6 +396,7 @@
 				A448607321A3FBF200CD1941 /* ZLOffLineDownLoadCell.xib */,
 				A424750D21A65C06007CB22E /* ZLUserDetailHeaderView.swift */,
 				A424750F21A65C17007CB22E /* ZLUserDetailHeaderView.xib */,
+				A40C10BD21AD2DB2007DAD21 /* ZLUserDetailBottomView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -715,6 +718,7 @@
 				A4C5D136219A796800B9F4C1 /* AppDelegate.swift in Sources */,
 				A424750E21A65C06007CB22E /* ZLUserDetailHeaderView.swift in Sources */,
 				A4C5D134219A796800B9F4C1 /* ZLVideoViewController.swift in Sources */,
+				A40C10BE21AD2DB2007DAD21 /* ZLUserDetailBottomView.swift in Sources */,
 				A4E9374521AB95DC00C58810 /* Foundation+Extension.swift in Sources */,
 				A4C5D13E219AA84300B9F4C1 /* ZLMyTabBar.swift in Sources */,
 				A448606E21A3ABF300CD1941 /* ZLSettingCell.swift in Sources */,

@@ -43,17 +43,27 @@ class ZLUserDetailController: UIViewController {
             self.userDetail = userDetail
             self.headerView.userDetail = userDetail
             if self.userDetail?.bottom_tab.count == 0 {
+                self.headerView.height = 979 - 34
                 self.bottomConstraint.constant = 0
+                self.BottomViewConstraintHeight.constant = 0
                 self.view.layoutIfNeeded()
             } else {
-                //
+                // 赋值到 bottomView 上
+                self.bottomView.addSubview(self.myBottomView)
+                self.myBottomView.bottomTabs = userDetail.bottom_tab
             }
         }
 
     }
     
+    lazy var myBottomView : ZLUserDetailBottomView = {
+        let myBottomView = ZLUserDetailBottomView()
+        
+        return myBottomView
+    }()
+    
     lazy var headerView : ZLUserDetailHeaderView = {
-        let headerView = ZLUserDetailHeaderView.detailHeaderView()
+        let headerView = ZLUserDetailHeaderView.loadViewFromNib()
         
         return headerView
     }()

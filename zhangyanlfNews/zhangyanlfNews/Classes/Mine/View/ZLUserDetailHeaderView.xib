@@ -169,7 +169,7 @@
                                 <color key="titleColor" red="0.28235294119999998" green="0.3921568627" blue="0.58431372550000005" alpha="1" colorSpace="deviceRGB"/>
                             </state>
                             <connections>
-                                <action selector="unfoldButtonClicked:" destination="iN0-l3-epB" eventType="touchUpInside" id="Tyb-bG-ywv"/>
+                                <action selector="unfoldButtonClicked" destination="iN0-l3-epB" eventType="touchUpInside" id="wFn-xJ-E38"/>
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yM0-ej-acf">
@@ -206,7 +206,7 @@
                                         <constraint firstAttribute="height" constant="0.5" id="ukt-f3-PUH"/>
                                     </constraints>
                                 </view>
-                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wsh-yt-rMm">
+                                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wsh-yt-rMm">
                                     <rect key="frame" x="0.0" y="0.5" width="375" height="40.5"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </scrollView>
@@ -315,7 +315,7 @@
                 <outlet property="verifiedAgencyLabelTop" destination="0py-gc-qHM" id="xwg-o5-xOw"/>
                 <outlet property="verifiedContentLabel" destination="hIW-K2-jWt" id="z53-Yl-Cgc"/>
             </connections>
-            <point key="canvasLocation" x="-1058" y="-92"/>
+            <point key="canvasLocation" x="-1249" y="1226"/>
         </view>
     </objects>
     <resources>
