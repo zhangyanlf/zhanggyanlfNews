@@ -50,7 +50,9 @@
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="collectionView" destination="5bc-9u-ce6" id="6oK-0O-g7Y"/>
+                <outlet property="relationLabelHeight" destination="N0O-5w-XL8" id="Jjk-L8-Jey"/>
             </connections>
+            <point key="canvasLocation" x="-623" y="53"/>
         </view>
     </objects>
 </document>

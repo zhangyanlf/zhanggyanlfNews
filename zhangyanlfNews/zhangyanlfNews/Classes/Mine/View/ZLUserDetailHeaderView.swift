@@ -265,6 +265,8 @@ extension ZLUserDetailHeaderView {
     @IBAction func unfoldButtonClicked() {
         unfoldButton.isHidden = true
         unfoldButtonWidth.constant = 0
+        relationRecommendView.relationLabelHeight.constant = 0
+        relationRecommendView.layoutIfNeeded()
         descriptionLabelHeight.constant = userDetail!.descriptionHeight
         UIView.animate(withDuration: 0.25, animations: {
             self.layoutIfNeeded()

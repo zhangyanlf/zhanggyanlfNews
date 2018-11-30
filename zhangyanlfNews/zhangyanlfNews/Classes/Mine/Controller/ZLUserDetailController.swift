@@ -55,6 +55,7 @@ class ZLUserDetailController: UIViewController {
         NetWorkTool.loadUserDetail(userId: userId) { (userDetail) in
             self.userDetail = userDetail
             self.headerView.userDetail = userDetail
+            self.navigationBar.userDetail = userDetail
             if self.userDetail?.bottom_tab.count == 0 {
                 self.headerView.height = 979 - 34
                 self.bottomConstraint.constant = 0
@@ -138,7 +139,7 @@ extension ZLUserDetailController: UIScrollViewDelegate {
         let offsetY = scrollView.contentOffset.y
         print(offsetY)
         // 图片黏住顶部，拉伸
-        if offsetY < (isIPhoneX ? -44 : -20) {
+        if offsetY <  -44  {
             let totalOffset = kZLUserDetailHeaderBGImageViewHeight + abs(offsetY)
             let f = totalOffset / kZLUserDetailHeaderBGImageViewHeight
             headerView.backgroundImageView.frame = CGRect(x: -screenWidth * (f - 1) * 0.5, y: offsetY, width: screenWidth * f, height: totalOffset)
@@ -156,6 +157,21 @@ extension ZLUserDetailController: UIScrollViewDelegate {
                navigationBar.backBtn.theme_setImage("images.personal_home_back_white_24x24_", forState: .normal)
                 navigationBar.moreBtn.theme_setImage("images.new_morewhite_titlebar_22x22_", forState: .normal)
             }
+            
+            // 14 + 15 + 14
+            var alpha1: CGFloat = offsetY / 57
+            if offsetY >= 43 {
+                alpha1 = min(alpha1, 1.0)
+                navigationBar.nameLabel.isHidden = false
+                navigationBar.concernButton.isHidden = false
+                navigationBar.nameLabel.textColor = UIColor(r: 0, g: 0, b: 0, alpha: alpha1)
+                navigationBar.concernButton.alpha = alpha1
+            } else {
+                alpha1 = min(0.0, alpha1)
+                navigationBar.nameLabel.textColor = UIColor(r: 0, g: 0, b: 0, alpha: alpha1)
+                navigationBar.concernButton.alpha = alpha1
+            }
+            
         }
     }
 }

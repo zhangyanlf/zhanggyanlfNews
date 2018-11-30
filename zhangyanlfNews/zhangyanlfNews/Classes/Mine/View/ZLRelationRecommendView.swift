@@ -13,6 +13,7 @@ class ZLRelationRecommendView: UIView, NibLoadable, RegisterCellFromNib {
 
     var userCards = [ZLUserCard]()
     
+    @IBOutlet weak var relationLabelHeight: NSLayoutConstraint!
     
     @IBOutlet weak var collectionView: UICollectionView!
     
