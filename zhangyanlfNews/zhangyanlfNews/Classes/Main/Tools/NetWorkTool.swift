@@ -129,7 +129,10 @@ extension NetWorkToolProtocol {
                     var attents = [ZLMyAttent]()
                     for data in datas{
                         let attent = ZLMyAttent.deserialize(from: data as? NSDictionary)
-                        attents.append(attent!)
+                        if (attent?.userid) != 0 { //判断用户userid是否存在
+                            attents.append(attent!)
+                        }
+                        
                     }
                     completionCallBack(attents)
                 }

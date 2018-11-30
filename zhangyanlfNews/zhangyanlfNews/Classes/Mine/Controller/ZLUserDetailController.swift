@@ -34,6 +34,7 @@ class ZLUserDetailController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
         scrollView.addSubview(headerView)
+        view.addSubview(navigationBar)
         scrollView.contentSize = CGSize(width: screenWidth, height: 1000)
         // 设置约束
         bottomConstraint.constant = isIPhoneX ? 34 : 0
@@ -55,19 +56,20 @@ class ZLUserDetailController: UIViewController {
         }
 
     }
-    
+    /// 底部试图
     lazy var myBottomView : ZLUserDetailBottomView = {
         let myBottomView = ZLUserDetailBottomView()
-        
+        myBottomView.delegate = self
         return myBottomView
     }()
-    
+    /// 头部试图
     lazy var headerView : ZLUserDetailHeaderView = {
         let headerView = ZLUserDetailHeaderView.loadViewFromNib()
         
         return headerView
     }()
-    
+    /// 自定义导航
+    lazy var navigationBar = ZLNavigationBar.loadViewFromNib()
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
@@ -76,4 +78,47 @@ class ZLUserDetailController: UIViewController {
 }
 
 
+extension ZLUserDetailController: UserDetailBottomViewDelegate  {
+    
+    
+    /// 底部按钮点击
+    ///
+    /// - Parameters:
+    ///   - button: 按钮
+    ///   - bottomTab: ZLBottomTab
+    func bottomView(clicked button: UIButton, bottomTab: ZLBottomTab) {
+        
 
+        let userDetailPushVC = ZLUserDetailBottomPushController()
+        userDetailPushVC.title = "网页浏览"
+        
+        if bottomTab.children.count == 0 {// 直接跳转到下一控制器
+            userDetailPushVC.url = bottomTab.value
+            navigationController?.pushViewController(userDetailPushVC, animated: true)
+        } else {// 弹出 子视图
+            let storyBoard = UIStoryboard(name: "\(ZLUserDetailPopController.self)", bundle: nil)
+            let udPopVC = storyBoard.instantiateViewController(withIdentifier: "\(ZLUserDetailPopController.self)") as! ZLUserDetailPopController
+            
+            udPopVC.childrens = bottomTab.children
+            udPopVC.modalPresentationStyle = .custom
+            udPopVC.didSeletcedChild = { [weak self] in
+                userDetailPushVC.url = $0.value
+                self!.navigationController?.pushViewController(userDetailPushVC, animated: true)
+            }
+            let popoverAnimator = ZLPopoverAnimator()
+            let rect = myBottomView.convert(button.frame, to: view)
+            let popWidth = (screenWidth - CGFloat(userDetail!.bottom_tab.count + 1) * 20) / CGFloat(userDetail!.bottom_tab.count)
+            let popX = CGFloat(button.tag) * (popWidth + 20) + 20
+            let popHeight = CGFloat(bottomTab.children.count) * 40 + 25
+            popoverAnimator.presetnFrame = CGRect(x: popX, y: rect.origin.y - popHeight, width: popWidth, height: popHeight)
+            
+            udPopVC.transitioningDelegate = popoverAnimator
+            present(udPopVC, animated: true, completion: nil)
+            
+            
+        }
+        
+    }
+    
+    
+}

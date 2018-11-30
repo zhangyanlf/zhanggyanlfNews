@@ -17,7 +17,7 @@ let screenHeight = UIScreen.main.bounds.height
 //let BASE_URL = "http://ib.snssdk.com"
 let BASE_URL = "https://is.snssdk.com"
 
-let device_id: Int = 6096495334
+let device_id: Int = 6096495334 //6096495334
 let iid: Int = 5034850950
 
 
@@ -32,7 +32,7 @@ let image1Width: CGFloat = screenWidth * 0.5
 let image2Width: CGFloat = (screenWidth - 35) * 0.5
 let image3Width: CGFloat = (screenWidth - 40) / 3
 
-
+let ZLPresentationControllerDismiss = "ZLPresentationControllerDismiss"
 let UserDetailHeaderViewButtonClicked = "UserDetailHeaderViewButtonClicked"
 
 /// 关注的用户详情界面 topTab 的按钮的宽度

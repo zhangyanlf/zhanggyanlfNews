@@ -150,8 +150,8 @@
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sCR-6w-F6v">
-                            <rect key="frame" x="15" y="142" width="33" height="21"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sCR-6w-F6v">
+                            <rect key="frame" x="15" y="142" width="315" height="21"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="21" id="EUG-uE-rbb"/>
                             </constraints>
@@ -230,6 +230,7 @@
                         <constraint firstItem="7qK-FE-N4i" firstAttribute="top" secondItem="yOL-cw-K5h" secondAttribute="bottom" constant="10" id="0py-gc-qHM"/>
                         <constraint firstItem="JfZ-xm-zda" firstAttribute="centerY" secondItem="scK-nI-8Z6" secondAttribute="centerY" id="4Sf-nk-hKz"/>
                         <constraint firstItem="yOL-cw-K5h" firstAttribute="leading" secondItem="QQ9-2a-pvI" secondAttribute="leading" constant="15" id="66t-Ws-90p"/>
+                        <constraint firstItem="Yq2-KB-VED" firstAttribute="leading" secondItem="sCR-6w-F6v" secondAttribute="trailing" id="8yT-e3-T8V"/>
                         <constraint firstItem="hIW-K2-jWt" firstAttribute="height" secondItem="7qK-FE-N4i" secondAttribute="height" id="9xN-6f-A3z"/>
                         <constraint firstAttribute="trailing" secondItem="y6Y-5z-Gcs" secondAttribute="trailing" id="Aha-WU-FOj"/>
                         <constraint firstItem="Jhi-vw-L8f" firstAttribute="trailing" secondItem="tPm-pz-gFF" secondAttribute="trailing" id="Alq-ey-IRl"/>
