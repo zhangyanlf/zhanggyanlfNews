@@ -75,6 +75,11 @@ class ZLUserDetailHeaderView: UIView, NibLoadable {
         return indicatorView
     }()
     
+    private lazy var relationRecommendView: ZLRelationRecommendView = {
+        let relationRecommendView = ZLRelationRecommendView.loadViewFromNib()
+        return relationRecommendView
+    }()
+    
     
     var userDetail: ZLUserDetail? {
         didSet {
@@ -238,7 +243,8 @@ extension ZLUserDetailHeaderView {
                 }, completion: { (_) in
                     //点击关注后  就会出现相关数据
                     NetWorkTool.loadRelationUserRecommend(userId: self.userDetail!.user_id, completionCallBack: { (userCards) in
-                        
+                        self.recommendView.addSubview(self.relationRecommendView)
+                        self.relationRecommendView.userCards = userCards
                     })
                 })
                 

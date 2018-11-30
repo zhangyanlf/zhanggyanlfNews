@@ -35,6 +35,9 @@ let image3Width: CGFloat = (screenWidth - 40) / 3
 let ZLPresentationControllerDismiss = "ZLPresentationControllerDismiss"
 let UserDetailHeaderViewButtonClicked = "UserDetailHeaderViewButtonClicked"
 
+/// 用户详情界面背景图片高度
+let kZLUserDetailHeaderBGImageViewHeight: CGFloat = 146
+
 /// 关注的用户详情界面 topTab 的按钮的宽度
 let topTabButtonWidth: CGFloat = screenWidth * 0.2
 /// 关注的用户详情界面 topTab 的指示条的宽度 和 高度

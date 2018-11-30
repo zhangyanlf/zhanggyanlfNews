@@ -9,6 +9,7 @@
 import UIKit
 
 class ZLNavigationBar: UIView, NibLoadable {
+    
 
     /// 导航栏栏
     @IBOutlet weak var navigationBar: UIView!
@@ -17,23 +18,24 @@ class ZLNavigationBar: UIView, NibLoadable {
     /// 更多按钮
     @IBOutlet weak var moreBtn: UIButton!
     
+    var goBackClickBotton: (()->())?
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        navigationBar.width = screenWidth
-        //theme_backgroundColor = "colors.cellBackgroundColor"
-        //backBtn.theme_setImage("images.personal_home_back_white_24x24_", forState: .normal)
-        //moreBtn.theme_setImage("images.new_morewhite_titlebar_22x22_", forState: .normal)
+        theme_backgroundColor = "colors.cellBackgroundColor"
+        
     }
     override func layoutSubviews() {
         super.layoutSubviews()
         height = navigationBar.frame.maxY
+        self.frame = CGRect(x: 0, y: 0, width: screenWidth, height: height)
     }
     
     
     /// 返回按钮点击
     @IBAction func returnButtonClicked(_ sender: UIButton) {
-        
+        goBackClickBotton?()
     }
     
     /// 更多按钮点击

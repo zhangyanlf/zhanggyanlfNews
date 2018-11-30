@@ -14,6 +14,10 @@
 		A424751021A65C17007CB22E /* ZLUserDetailHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A424750F21A65C17007CB22E /* ZLUserDetailHeaderView.xib */; };
 		A430A62A21A2A6AF009F1D15 /* ZLSystemSetupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A430A62921A2A6AF009F1D15 /* ZLSystemSetupController.swift */; };
 		A430A62C21A2B8AB009F1D15 /* settingPlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = A430A62B21A2B8AA009F1D15 /* settingPlist.plist */; };
+		A4363C6021B0DD5200BBE818 /* ZLRelationRecommendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4363C5F21B0DD5200BBE818 /* ZLRelationRecommendView.swift */; };
+		A4363C6221B0DD6300BBE818 /* ZLRelationRecommendView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4363C6121B0DD6200BBE818 /* ZLRelationRecommendView.xib */; };
+		A4363C6521B0DF1200BBE818 /* ZLRelationRecommendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4363C6321B0DF1200BBE818 /* ZLRelationRecommendCell.swift */; };
+		A4363C6621B0DF1200BBE818 /* ZLRelationRecommendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4363C6421B0DF1200BBE818 /* ZLRelationRecommendCell.xib */; };
 		A44072BB21A249CC0062FD09 /* ZLMoreLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44072BA21A249CC0062FD09 /* ZLMoreLoginViewController.swift */; };
 		A44072BD21A24A150062FD09 /* ZLMoreLoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44072BC21A24A150062FD09 /* ZLMoreLoginViewController.storyboard */; };
 		A448606B21A3A50500CD1941 /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A448606A21A3A50500CD1941 /* SettingModel.swift */; };
@@ -96,6 +100,10 @@
 		A424750F21A65C17007CB22E /* ZLUserDetailHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZLUserDetailHeaderView.xib; sourceTree = "<group>"; };
 		A430A62921A2A6AF009F1D15 /* ZLSystemSetupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLSystemSetupController.swift; sourceTree = "<group>"; };
 		A430A62B21A2B8AA009F1D15 /* settingPlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = settingPlist.plist; sourceTree = "<group>"; };
+		A4363C5F21B0DD5200BBE818 /* ZLRelationRecommendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLRelationRecommendView.swift; sourceTree = "<group>"; };
+		A4363C6121B0DD6200BBE818 /* ZLRelationRecommendView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZLRelationRecommendView.xib; sourceTree = "<group>"; };
+		A4363C6321B0DF1200BBE818 /* ZLRelationRecommendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLRelationRecommendCell.swift; sourceTree = "<group>"; };
+		A4363C6421B0DF1200BBE818 /* ZLRelationRecommendCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZLRelationRecommendCell.xib; sourceTree = "<group>"; };
 		A44072BA21A249CC0062FD09 /* ZLMoreLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLMoreLoginViewController.swift; sourceTree = "<group>"; };
 		A44072BC21A24A150062FD09 /* ZLMoreLoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ZLMoreLoginViewController.storyboard; sourceTree = "<group>"; };
 		A448606A21A3A50500CD1941 /* SettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
@@ -418,6 +426,10 @@
 				A40C10BD21AD2DB2007DAD21 /* ZLUserDetailBottomView.swift */,
 				A44DDFB021AFC7210008AD0F /* ZLNavigationBar.swift */,
 				A44DDFB221AFC73F0008AD0F /* ZLNavigationBar.xib */,
+				A4363C5F21B0DD5200BBE818 /* ZLRelationRecommendView.swift */,
+				A4363C6121B0DD6200BBE818 /* ZLRelationRecommendView.xib */,
+				A4363C6321B0DF1200BBE818 /* ZLRelationRecommendCell.swift */,
+				A4363C6421B0DF1200BBE818 /* ZLRelationRecommendCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -637,8 +649,10 @@
 				A49ABE73219BD1C600E63CF9 /* ZLMyOtherCell.xib in Resources */,
 				A4ED4AB32194184000A5E81C /* LaunchScreen.storyboard in Resources */,
 				A44DDFAB21AF90C90008AD0F /* ZLUserDetailPopController.storyboard in Resources */,
+				A4363C6221B0DD6300BBE818 /* ZLRelationRecommendView.xib in Resources */,
 				A44072BD21A24A150062FD09 /* ZLMoreLoginViewController.storyboard in Resources */,
 				A448607521A3FBF200CD1941 /* ZLOffLineDownLoadCell.xib in Resources */,
+				A4363C6621B0DF1200BBE818 /* ZLRelationRecommendCell.xib in Resources */,
 				A430A62C21A2B8AB009F1D15 /* settingPlist.plist in Resources */,
 				A4C65686219D3FDB00E8E118 /* default_theme.plist in Resources */,
 				A4ED4AB02194184000A5E81C /* Assets.xcassets in Resources */,
@@ -756,11 +770,13 @@
 				A430A62A21A2A6AF009F1D15 /* ZLSystemSetupController.swift in Sources */,
 				A448607921A4004B00CD1941 /* HomeNewsTitle.swift in Sources */,
 				A49ABE76219BEDBF00E63CF9 /* ZLAttentCell.swift in Sources */,
+				A4363C6521B0DF1200BBE818 /* ZLRelationRecommendCell.swift in Sources */,
 				A49ABE6F219BC17000E63CF9 /* ZLMyCellModel.swift in Sources */,
 				A49ABE72219BD1C600E63CF9 /* ZLMyOtherCell.swift in Sources */,
 				A44072BB21A249CC0062FD09 /* ZLMoreLoginViewController.swift in Sources */,
 				A44DDFAF21AFB4F60008AD0F /* ZLPresentationController.swift in Sources */,
 				A4C5D135219A796800B9F4C1 /* ZLHuoShanViewController.swift in Sources */,
+				A4363C6021B0DD5200BBE818 /* ZLRelationRecommendView.swift in Sources */,
 				A44DDFB121AFC7210008AD0F /* ZLNavigationBar.swift in Sources */,
 				A49ABE7E219C082000E63CF9 /* ZLConcernCell.swift in Sources */,
 				A49ABE81219C1FAF00E63CF9 /* ZLNoLoginHeaderView.swift in Sources */,
