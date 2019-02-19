@@ -13,11 +13,35 @@ class ZLVideoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor.white
+        // 设置UI
+        setupUI()
+        
     }
     
+    
+    lazy var navigationBar: ZLHomeNavigationBar = {
+        let navigationBar = ZLHomeNavigationBar.loadViewFromNib()
+        return navigationBar
+    }()
+    
 
     
 
+}
+
+extension ZLVideoViewController {
+    private func setupUI(){
+        view.theme_backgroundColor = "colors.cellBackgroundColor"
+        navigationController?.navigationBar.barStyle = .black
+        navigationItem.titleView = navigationBar
+        
+        //获取新闻标题数据
+        NetWorkTool.loadHomeTitleData { (homeTitles) in
+            NewsTitleTable().insert(homeTitles)
+        }
+        // 点击图像按钮
+        navigationBar.didSelectAvatarButton = { [weak self] in
+            self?.navigationController?.pushViewController(ZLMineViewController(), animated: true)
+        }
+    }
 }

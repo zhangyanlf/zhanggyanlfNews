@@ -35,6 +35,22 @@ enum MyTheme: Int {
     static func isNight() -> Bool{
         return current == .night
     }
+}
+
+
+
+struct ZlThemeStyle {
+    ///设置导航栏日间模式
+    static func setDaynavigationStyle(_ viewController: UIViewController) {
+        viewController.navigationController?.navigationBar.barStyle = .default
+        viewController.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.black]
+        viewController.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "navigation_background_white"), for: .default)
+    }
     
-    
+    ///设置导航栏夜间模式
+    static func setNightnavigationStyle(_ viewController: UIViewController) {
+        viewController.navigationController?.navigationBar.barStyle = .black
+        viewController.navigationController?.navigationBar.setBackgroundImage(UIImage(named: "navigation_background_white_night"), for: .default)
+        viewController.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.grayColor113()]
+    }
 }

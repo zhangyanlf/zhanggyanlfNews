@@ -13,17 +13,17 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ZLUserDetailHeaderView" customModule="zhangyanlfNews" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="362"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="969"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wallpaper_profile_night" translatesAutoresizingMaskIntoConstraints="NO" id="iby-UM-RS5">
-                    <rect key="frame" x="0.0" y="-44" width="375" height="146"/>
+                    <rect key="frame" x="0.0" y="-24" width="375" height="146"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="146" id="SwZ-uj-by8"/>
                     </constraints>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QQ9-2a-pvI">
-                    <rect key="frame" x="0.0" y="102" width="375" height="260"/>
+                    <rect key="frame" x="0.0" y="122" width="375" height="242"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tPm-pz-gFF" customClass="AnimatableImageView" customModule="IBAnimatable">
                             <rect key="frame" x="15" y="-36" width="72" height="72"/>
@@ -263,22 +263,29 @@
                         <constraint firstItem="hIW-K2-jWt" firstAttribute="centerY" secondItem="7qK-FE-N4i" secondAttribute="centerY" id="rMk-12-Fbu"/>
                         <constraint firstItem="BSt-G8-nZg" firstAttribute="leading" secondItem="yOL-cw-K5h" secondAttribute="trailing" constant="3" id="riD-OK-zaC"/>
                         <constraint firstItem="sCR-6w-F6v" firstAttribute="leading" secondItem="t3X-Gi-hgR" secondAttribute="leading" id="sgt-tm-Rxh"/>
+                        <constraint firstAttribute="bottom" secondItem="VTs-5U-2X9" secondAttribute="bottom" id="vP3-QR-ZAB"/>
                         <constraint firstItem="JfZ-xm-zda" firstAttribute="leading" secondItem="scK-nI-8Z6" secondAttribute="trailing" constant="5" id="wP4-ih-WUw"/>
                         <constraint firstItem="YRu-Zm-yfw" firstAttribute="leading" secondItem="RbG-Se-ijW" secondAttribute="trailing" constant="5" id="wlo-BY-qDg"/>
                         <constraint firstItem="scK-nI-8Z6" firstAttribute="leading" secondItem="3a2-Xg-z5m" secondAttribute="trailing" constant="18" id="xMn-3A-RUK"/>
                         <constraint firstItem="t3X-Gi-hgR" firstAttribute="leading" secondItem="7qK-FE-N4i" secondAttribute="leading" id="yXU-qU-u2Z"/>
                     </constraints>
                 </view>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ol-uK-PeI">
+                    <rect key="frame" x="0.0" y="364" width="375" height="605"/>
+                </scrollView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="iby-UM-RS5" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="7Wc-NO-T4v"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="QQ9-2a-pvI" secondAttribute="trailing" id="85k-v8-GOK"/>
                 <constraint firstItem="iby-UM-RS5" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="-44" id="8tJ-eR-QYy"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="QQ9-2a-pvI" secondAttribute="bottom" id="EQe-xp-It2"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="2ol-uK-PeI" secondAttribute="trailing" id="Dhh-kT-SyK"/>
                 <constraint firstItem="QQ9-2a-pvI" firstAttribute="top" secondItem="iby-UM-RS5" secondAttribute="bottom" id="JLQ-vU-fbb"/>
                 <constraint firstItem="QQ9-2a-pvI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="LfL-yJ-uon"/>
+                <constraint firstItem="2ol-uK-PeI" firstAttribute="top" secondItem="QQ9-2a-pvI" secondAttribute="bottom" id="MDJ-6R-F6d"/>
+                <constraint firstItem="2ol-uK-PeI" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="auj-a6-uxG"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="iby-UM-RS5" secondAttribute="trailing" id="dho-Od-tkW"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="2ol-uK-PeI" secondAttribute="bottom" id="rp1-DL-kUS"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
@@ -290,6 +297,7 @@
                 <outlet property="backgroundImageView" destination="iby-UM-RS5" id="gxZ-A2-aXg"/>
                 <outlet property="baseView" destination="QQ9-2a-pvI" id="WYm-Qb-abW"/>
                 <outlet property="bgImageViewTop" destination="8tJ-eR-QYy" id="275-Gc-uAb"/>
+                <outlet property="bottomScrollView" destination="2ol-uK-PeI" id="ljV-fa-tFA"/>
                 <outlet property="concernButton" destination="scK-nI-8Z6" id="bPC-da-Oz4"/>
                 <outlet property="descriptionLabel" destination="sCR-6w-F6v" id="E6l-gf-sK6"/>
                 <outlet property="descriptionLabelHeight" destination="EUG-uE-rbb" id="cyd-o7-Vpq"/>
@@ -316,7 +324,7 @@
                 <outlet property="verifiedAgencyLabelTop" destination="0py-gc-qHM" id="xwg-o5-xOw"/>
                 <outlet property="verifiedContentLabel" destination="hIW-K2-jWt" id="z53-Yl-Cgc"/>
             </connections>
-            <point key="canvasLocation" x="-1249" y="1226"/>
+            <point key="canvasLocation" x="-1510" y="1306"/>
         </view>
     </objects>
     <resources>

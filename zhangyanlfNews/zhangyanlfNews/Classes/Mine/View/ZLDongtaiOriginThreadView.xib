@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ZLDongtaiOriginThreadView" customModule="zhangyanlfNews" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="131"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yzs-8d-K5J">
+                    <rect key="frame" x="15" y="10" width="345" height="0.0"/>
+                    <constraints>
+                        <constraint firstAttribute="height" id="fQ3-9K-MQe"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="bFk-L1-Jcw" customClass="ZLDongtaiCollectionView" customModule="zhangyanlfNews" customModuleProvider="target">
+                    <rect key="frame" x="15" y="10" width="0.0" height="121"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" id="9lK-t2-7V4"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BcB-6O-Sf8">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="bFk-L1-Jcw" secondAttribute="bottom" id="Ses-Af-HqO"/>
+                <constraint firstItem="bFk-L1-Jcw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="XlN-ca-85u"/>
+                <constraint firstItem="Yzs-8d-K5J" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="15" id="fxw-zn-tJ3"/>
+                <constraint firstItem="bFk-L1-Jcw" firstAttribute="top" secondItem="Yzs-8d-K5J" secondAttribute="bottom" id="otd-YP-SBF"/>
+                <constraint firstItem="Yzs-8d-K5J" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="10" id="vpL-CY-xxo"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Yzs-8d-K5J" secondAttribute="trailing" constant="15" id="wkH-kj-ZSc"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="collectionView" destination="bFk-L1-Jcw" id="aJw-Hp-Kyf"/>
+                <outlet property="contentLabel" destination="Yzs-8d-K5J" id="MEn-lV-tfo"/>
+                <outlet property="contentlabelConstraint" destination="fQ3-9K-MQe" id="U9T-od-bxg"/>
+            </connections>
+            <point key="canvasLocation" x="-42.399999999999999" y="-49.925037481259373"/>
+        </view>
+    </objects>
+</document>

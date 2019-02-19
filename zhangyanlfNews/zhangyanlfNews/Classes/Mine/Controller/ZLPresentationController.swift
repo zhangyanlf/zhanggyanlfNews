@@ -21,7 +21,6 @@ class ZLPresentationController: UIPresentationController {
     override func containerViewWillLayoutSubviews() {
         /// 修改弹出视图的大小
         presentedView?.frame = presentFrame!
-        
         let coverView = UIView(frame: UIScreen.main.bounds)
         coverView.backgroundColor = .clear
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissPresentedViewController))
@@ -34,6 +33,8 @@ class ZLPresentationController: UIPresentationController {
     @objc func dismissPresentedViewController() {
         presentedViewController.dismiss(animated: false, completion: nil)
     }
+    
+    
     
 
 }

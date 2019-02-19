@@ -33,8 +33,8 @@ class ZLMyTabController: UITabBarController {
                     setNightChildController(controller: childController, imageName: "video")
                 case "小视频":
                     setNightChildController(controller: childController, imageName: "huoshan")
-                case "未登录":
-                    setNightChildController(controller: childController, imageName: "no_login")
+                case "微头条":
+                    setNightChildController(controller: childController, imageName: "weitoutiao")
                 default:
                     break
                 }
@@ -48,8 +48,8 @@ class ZLMyTabController: UITabBarController {
                     setDayChildController(controller: childController, imageName: "video")
                 case "小视频":
                     setDayChildController(controller: childController, imageName: "huoshan")
-                case "未登录":
-                    setDayChildController(controller: childController, imageName: "no_login")
+                case "微头条":
+                    setDayChildController(controller: childController, imageName: "weitoutiao")
                 default:
                     break
                 }
@@ -78,8 +78,9 @@ class ZLMyTabController: UITabBarController {
     private func addChildViewController() {
         setChild(ZLHomeViewController(), title: "首页", imageName: "home")
         setChild(ZLVideoViewController(), title: "视频", imageName: "video")
+        setChild(ZLWeiTouTiaoController(), title: "微头条", imageName: "weitoutiao")
         setChild(ZLHuoShanViewController(), title: "小视频", imageName: "huoshan")
-        setChild(ZLMineViewController(), title: "未登录", imageName: "no_login")
+        
         //tabbar 是 readonly 属性不能直接修改 通过KVC
         setValue(ZLMyTabBar(), forKey: "tabBar")
     }

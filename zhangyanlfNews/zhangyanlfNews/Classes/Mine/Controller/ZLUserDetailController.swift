@@ -47,27 +47,33 @@ class ZLUserDetailController: UIViewController {
         navigationBar.goBackClickBotton = { [weak self] in
             self?.navigationController?.popViewController(animated: true)
         }
-        scrollView.contentSize = CGSize(width: screenWidth, height: 1000)
+       
         // 设置约束
         bottomConstraint.constant = isIPhoneX ? 34 : 0
         view.layoutIfNeeded()
         /// 获取用户详情
         NetWorkTool.loadUserDetail(userId: userId) { (userDetail) in
-            self.userDetail = userDetail
-            self.headerView.userDetail = userDetail
-            self.navigationBar.userDetail = userDetail
-            if self.userDetail?.bottom_tab.count == 0 {
-                self.headerView.height = 979 - 34
-                self.bottomConstraint.constant = 0
-                self.BottomViewConstraintHeight.constant = 0
-                self.view.layoutIfNeeded()
-            } else {
-                self.headerView.height = 969
-                // 赋值到 bottomView 上
-                self.bottomView.addSubview(self.myBottomView)
-                self.bottomView.backgroundColor = UIColor.red
-                self.myBottomView.bottomTabs = userDetail.bottom_tab
-            }
+            /// 获取用户动态数据
+            NetWorkTool.loadUserDetailDongtaiList(userId: self.userId, maxCursor: 0, completionCallBack: { (cursor, dongtais) in
+                self.userDetail = userDetail
+                self.headerView.userDetail = userDetail
+                self.headerView.dongtais = dongtais
+                self.navigationBar.userDetail = userDetail
+                if self.userDetail?.bottom_tab.count == 0 {
+                    self.headerView.height = 979 - 34
+                    self.bottomConstraint.constant = 0
+                    self.BottomViewConstraintHeight.constant = 0
+                    self.view.layoutIfNeeded()
+                } else {
+                    self.headerView.height = 969
+                    // 赋值到 bottomView 上
+                    self.bottomView.addSubview(self.myBottomView)
+                    self.bottomView.backgroundColor = UIColor.red
+                    self.myBottomView.bottomTabs = userDetail.bottom_tab
+                }
+                self.scrollView.contentSize = CGSize(width: screenWidth, height: self.headerView.height)
+            })
+
         }
 
     }
@@ -145,6 +151,10 @@ extension ZLUserDetailController: UIScrollViewDelegate {
             headerView.backgroundImageView.frame = CGRect(x: -screenWidth * (f - 1) * 0.5, y: offsetY, width: screenWidth * f, height: totalOffset)
             navigationBar.backgroundColor = UIColor(white: 1.0, alpha: 0.0)
         } else {
+            for subview in headerView.bottomScrollView.subviews {
+                let tableView = subview as! UITableView
+                tableView.isScrollEnabled = false
+            }
             var alpha: CGFloat = (offsetY + 44) / 58
             alpha = min(alpha, 1.0)
             navigationBar.backgroundColor = UIColor(white: 1.0, alpha: alpha)
@@ -170,6 +180,19 @@ extension ZLUserDetailController: UIScrollViewDelegate {
                 alpha1 = min(0.0, alpha1)
                 navigationBar.nameLabel.textColor = UIColor(r: 0, g: 0, b: 0, alpha: alpha1)
                 navigationBar.concernButton.alpha = alpha1
+            }
+            
+            /// 设置 headerView 的 topTab 黏住顶部
+            // 14 + headerView.topTabView.frame.minY(201)
+            let topViewH: CGFloat = 14 + headerView.topTabView.frame.minY
+            if offsetY >= topViewH {
+                headerView.y = offsetY - topViewH
+                for subview in headerView.bottomScrollView.subviews {
+                    let tableView = subview as! UITableView
+                    tableView.isScrollEnabled = true
+                }
+            } else {
+                headerView.y = 0
             }
             
         }

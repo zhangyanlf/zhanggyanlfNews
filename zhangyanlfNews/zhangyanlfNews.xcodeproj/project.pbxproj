@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		A40C10BE21AD2DB2007DAD21 /* ZLUserDetailBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40C10BD21AD2DB2007DAD21 /* ZLUserDetailBottomView.swift */; };
+		A40FEF4B21DDEC5200A52E67 /* ZLPostVideoArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40FEF4A21DDEC5200A52E67 /* ZLPostVideoArticleView.swift */; };
+		A40FEF4D21DDEC6B00A52E67 /* ZLPostVideoArticleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A40FEF4C21DDEC6B00A52E67 /* ZLPostVideoArticleView.xib */; };
+		A40FEF5021DDF70B00A52E67 /* ZLDongtaiCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40FEF4E21DDF70B00A52E67 /* ZLDongtaiCollectionViewCell.swift */; };
+		A40FEF5121DDF70B00A52E67 /* ZLDongtaiCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A40FEF4F21DDF70B00A52E67 /* ZLDongtaiCollectionViewCell.xib */; };
 		A424750B21A64CF9007CB22E /* ZLUserDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A424750921A64CF9007CB22E /* ZLUserDetailController.swift */; };
 		A424750C21A64CF9007CB22E /* ZLUserDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A424750A21A64CF9007CB22E /* ZLUserDetailController.xib */; };
 		A424750E21A65C06007CB22E /* ZLUserDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A424750D21A65C06007CB22E /* ZLUserDetailHeaderView.swift */; };
@@ -18,6 +22,10 @@
 		A4363C6221B0DD6300BBE818 /* ZLRelationRecommendView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4363C6121B0DD6200BBE818 /* ZLRelationRecommendView.xib */; };
 		A4363C6521B0DF1200BBE818 /* ZLRelationRecommendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4363C6321B0DF1200BBE818 /* ZLRelationRecommendCell.swift */; };
 		A4363C6621B0DF1200BBE818 /* ZLRelationRecommendCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4363C6421B0DF1200BBE818 /* ZLRelationRecommendCell.xib */; };
+		A43A616121E44ED5005C6744 /* ZLDongtaiOriginThreadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43A616021E44ED5005C6744 /* ZLDongtaiOriginThreadView.swift */; };
+		A43A616321E44EF6005C6744 /* ZLDongtaiOriginThreadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43A616221E44EF6005C6744 /* ZLDongtaiOriginThreadView.xib */; };
+		A43A616521E45217005C6744 /* ZLDongtaiCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A43A616421E45217005C6744 /* ZLDongtaiCollectionView.swift */; };
+		A43A616721E492B6005C6744 /* ZLDongtaiCollectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A43A616621E492B6005C6744 /* ZLDongtaiCollectionView.xib */; };
 		A44072BB21A249CC0062FD09 /* ZLMoreLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44072BA21A249CC0062FD09 /* ZLMoreLoginViewController.swift */; };
 		A44072BD21A24A150062FD09 /* ZLMoreLoginViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A44072BC21A24A150062FD09 /* ZLMoreLoginViewController.storyboard */; };
 		A448606B21A3A50500CD1941 /* SettingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A448606A21A3A50500CD1941 /* SettingModel.swift */; };
@@ -34,6 +42,10 @@
 		A44DDFAF21AFB4F60008AD0F /* ZLPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44DDFAE21AFB4F60008AD0F /* ZLPresentationController.swift */; };
 		A44DDFB121AFC7210008AD0F /* ZLNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A44DDFB021AFC7210008AD0F /* ZLNavigationBar.swift */; };
 		A44DDFB321AFC73F0008AD0F /* ZLNavigationBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = A44DDFB221AFC73F0008AD0F /* ZLNavigationBar.xib */; };
+		A452ACA221B8C80B0022BBEF /* ZLUserDetailDongTaiCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A452ACA021B8C80B0022BBEF /* ZLUserDetailDongTaiCell.swift */; };
+		A452ACA321B8C80B0022BBEF /* ZLUserDetailDongTaiCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A452ACA121B8C80B0022BBEF /* ZLUserDetailDongTaiCell.xib */; };
+		A452ACA521B911250022BBEF /* emoji_sort.plist in Resources */ = {isa = PBXBuildFile; fileRef = A452ACA421B911250022BBEF /* emoji_sort.plist */; };
+		A452ACA721B9112E0022BBEF /* emoji_mapping.plist in Resources */ = {isa = PBXBuildFile; fileRef = A452ACA621B9112E0022BBEF /* emoji_mapping.plist */; };
 		A49ABE6D219BB7B000E63CF9 /* NetWorkTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49ABE6C219BB7B000E63CF9 /* NetWorkTool.swift */; };
 		A49ABE6F219BC17000E63CF9 /* ZLMyCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49ABE6E219BC17000E63CF9 /* ZLMyCellModel.swift */; };
 		A49ABE72219BD1C600E63CF9 /* ZLMyOtherCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49ABE70219BD1C600E63CF9 /* ZLMyOtherCell.swift */; };
@@ -45,6 +57,8 @@
 		A49ABE7F219C082000E63CF9 /* ZLConcernCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A49ABE7D219C082000E63CF9 /* ZLConcernCell.xib */; };
 		A49ABE81219C1FAF00E63CF9 /* ZLNoLoginHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49ABE80219C1FAF00E63CF9 /* ZLNoLoginHeaderView.swift */; };
 		A49ABE83219C1FC000E63CF9 /* ZLNoLoginHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A49ABE82219C1FC000E63CF9 /* ZLNoLoginHeaderView.xib */; };
+		A49DAC1521EC2F3700A506E7 /* ZLHomeNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49DAC1421EC2F3700A506E7 /* ZLHomeNavigationBar.swift */; };
+		A49DAC1721EC2F4300A506E7 /* ZLHomeNavigationBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = A49DAC1621EC2F4300A506E7 /* ZLHomeNavigationBar.xib */; };
 		A4C5D133219A796800B9F4C1 /* ZLHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C5D117219A796800B9F4C1 /* ZLHomeViewController.swift */; };
 		A4C5D134219A796800B9F4C1 /* ZLVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C5D11D219A796800B9F4C1 /* ZLVideoViewController.swift */; };
 		A4C5D135219A796800B9F4C1 /* ZLHuoShanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4C5D123219A796800B9F4C1 /* ZLHuoShanViewController.swift */; };
@@ -67,6 +81,8 @@
 		A4ED4AB32194184000A5E81C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4ED4AB12194184000A5E81C /* LaunchScreen.storyboard */; };
 		A4ED4ABE2194184000A5E81C /* zhangyanlfNewsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ED4ABD2194184000A5E81C /* zhangyanlfNewsTests.swift */; };
 		A4ED4AC92194184000A5E81C /* zhangyanlfNewsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4ED4AC82194184000A5E81C /* zhangyanlfNewsUITests.swift */; };
+		A4F1081E21EDCB4B00FB8CB7 /* ZLWeiTouTiaoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F1081C21EDCB4B00FB8CB7 /* ZLWeiTouTiaoController.swift */; };
+		A4F1081F21EDCB4B00FB8CB7 /* ZLWeiTouTiaoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4F1081D21EDCB4B00FB8CB7 /* ZLWeiTouTiaoController.xib */; };
 		A4FDF75021A5375A00202DDB /* SQliteManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FDF74F21A5375A00202DDB /* SQliteManager.swift */; };
 		A4FDF75221A537A200202DDB /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A4FDF75121A537A200202DDB /* libsqlite3.tbd */; };
 		C19D67ED1B3EC167959B497A /* Pods_zhangyanlfNews.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C844C24B2273CB3BDD3DF4C6 /* Pods_zhangyanlfNews.framework */; };
@@ -94,6 +110,10 @@
 		43208B121A8FD6EA95A7DF53 /* Pods-zhangyanlfNews.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zhangyanlfNews.debug.xcconfig"; path = "Pods/Target Support Files/Pods-zhangyanlfNews/Pods-zhangyanlfNews.debug.xcconfig"; sourceTree = "<group>"; };
 		6C2C714F6852CE7E2B13D194 /* Pods_zhangyanlfNewsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_zhangyanlfNewsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A40C10BD21AD2DB2007DAD21 /* ZLUserDetailBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLUserDetailBottomView.swift; sourceTree = "<group>"; };
+		A40FEF4A21DDEC5200A52E67 /* ZLPostVideoArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLPostVideoArticleView.swift; sourceTree = "<group>"; };
+		A40FEF4C21DDEC6B00A52E67 /* ZLPostVideoArticleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZLPostVideoArticleView.xib; sourceTree = "<group>"; };
+		A40FEF4E21DDF70B00A52E67 /* ZLDongtaiCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLDongtaiCollectionViewCell.swift; sourceTree = "<group>"; };
+		A40FEF4F21DDF70B00A52E67 /* ZLDongtaiCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZLDongtaiCollectionViewCell.xib; sourceTree = "<group>"; };
 		A424750921A64CF9007CB22E /* ZLUserDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLUserDetailController.swift; sourceTree = "<group>"; };
 		A424750A21A64CF9007CB22E /* ZLUserDetailController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZLUserDetailController.xib; sourceTree = "<group>"; };
 		A424750D21A65C06007CB22E /* ZLUserDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLUserDetailHeaderView.swift; sourceTree = "<group>"; };
@@ -104,6 +124,10 @@
 		A4363C6121B0DD6200BBE818 /* ZLRelationRecommendView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZLRelationRecommendView.xib; sourceTree = "<group>"; };
 		A4363C6321B0DF1200BBE818 /* ZLRelationRecommendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLRelationRecommendCell.swift; sourceTree = "<group>"; };
 		A4363C6421B0DF1200BBE818 /* ZLRelationRecommendCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZLRelationRecommendCell.xib; sourceTree = "<group>"; };
+		A43A616021E44ED5005C6744 /* ZLDongtaiOriginThreadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLDongtaiOriginThreadView.swift; sourceTree = "<group>"; };
+		A43A616221E44EF6005C6744 /* ZLDongtaiOriginThreadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZLDongtaiOriginThreadView.xib; sourceTree = "<group>"; };
+		A43A616421E45217005C6744 /* ZLDongtaiCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLDongtaiCollectionView.swift; sourceTree = "<group>"; };
+		A43A616621E492B6005C6744 /* ZLDongtaiCollectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZLDongtaiCollectionView.xib; sourceTree = "<group>"; };
 		A44072BA21A249CC0062FD09 /* ZLMoreLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLMoreLoginViewController.swift; sourceTree = "<group>"; };
 		A44072BC21A24A150062FD09 /* ZLMoreLoginViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ZLMoreLoginViewController.storyboard; sourceTree = "<group>"; };
 		A448606A21A3A50500CD1941 /* SettingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingModel.swift; sourceTree = "<group>"; };
@@ -120,6 +144,10 @@
 		A44DDFAE21AFB4F60008AD0F /* ZLPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLPresentationController.swift; sourceTree = "<group>"; };
 		A44DDFB021AFC7210008AD0F /* ZLNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLNavigationBar.swift; sourceTree = "<group>"; };
 		A44DDFB221AFC73F0008AD0F /* ZLNavigationBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZLNavigationBar.xib; sourceTree = "<group>"; };
+		A452ACA021B8C80B0022BBEF /* ZLUserDetailDongTaiCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLUserDetailDongTaiCell.swift; sourceTree = "<group>"; };
+		A452ACA121B8C80B0022BBEF /* ZLUserDetailDongTaiCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZLUserDetailDongTaiCell.xib; sourceTree = "<group>"; };
+		A452ACA421B911250022BBEF /* emoji_sort.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = emoji_sort.plist; sourceTree = "<group>"; };
+		A452ACA621B9112E0022BBEF /* emoji_mapping.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = emoji_mapping.plist; sourceTree = "<group>"; };
 		A49ABE6C219BB7B000E63CF9 /* NetWorkTool.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkTool.swift; sourceTree = "<group>"; };
 		A49ABE6E219BC17000E63CF9 /* ZLMyCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLMyCellModel.swift; sourceTree = "<group>"; };
 		A49ABE70219BD1C600E63CF9 /* ZLMyOtherCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLMyOtherCell.swift; sourceTree = "<group>"; };
@@ -131,6 +159,8 @@
 		A49ABE7D219C082000E63CF9 /* ZLConcernCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZLConcernCell.xib; sourceTree = "<group>"; };
 		A49ABE80219C1FAF00E63CF9 /* ZLNoLoginHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLNoLoginHeaderView.swift; sourceTree = "<group>"; };
 		A49ABE82219C1FC000E63CF9 /* ZLNoLoginHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZLNoLoginHeaderView.xib; sourceTree = "<group>"; };
+		A49DAC1421EC2F3700A506E7 /* ZLHomeNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLHomeNavigationBar.swift; sourceTree = "<group>"; };
+		A49DAC1621EC2F4300A506E7 /* ZLHomeNavigationBar.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZLHomeNavigationBar.xib; sourceTree = "<group>"; };
 		A4C5D117219A796800B9F4C1 /* ZLHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLHomeViewController.swift; sourceTree = "<group>"; };
 		A4C5D11D219A796800B9F4C1 /* ZLVideoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLVideoViewController.swift; sourceTree = "<group>"; };
 		A4C5D123219A796800B9F4C1 /* ZLHuoShanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZLHuoShanViewController.swift; sourceTree = "<group>"; };
@@ -159,6 +189,8 @@
 		A4ED4AC42194184000A5E81C /* zhangyanlfNewsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = zhangyanlfNewsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4ED4AC82194184000A5E81C /* zhangyanlfNewsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zhangyanlfNewsUITests.swift; sourceTree = "<group>"; };
 		A4ED4ACA2194184000A5E81C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4F1081C21EDCB4B00FB8CB7 /* ZLWeiTouTiaoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZLWeiTouTiaoController.swift; sourceTree = "<group>"; };
+		A4F1081D21EDCB4B00FB8CB7 /* ZLWeiTouTiaoController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZLWeiTouTiaoController.xib; sourceTree = "<group>"; };
 		A4FDF74F21A5375A00202DDB /* SQliteManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SQliteManager.swift; sourceTree = "<group>"; };
 		A4FDF75121A537A200202DDB /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		B5F03EC2BA66D5637A1FE527 /* Pods_zhangyanlfNewsUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_zhangyanlfNewsUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -218,6 +250,7 @@
 			children = (
 				A4C5D114219A796800B9F4C1 /* Home */,
 				A4C5D11A219A796800B9F4C1 /* Video */,
+				A4F1081821EDCB1F00FB8CB7 /* Weitoutiao */,
 				A4C5D120219A796800B9F4C1 /* HuoShan */,
 				A4C5D126219A796800B9F4C1 /* Others */,
 				A4C5D129219A796800B9F4C1 /* Mine */,
@@ -263,6 +296,8 @@
 		A4C5D119219A796800B9F4C1 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A49DAC1421EC2F3700A506E7 /* ZLHomeNavigationBar.swift */,
+				A49DAC1621EC2F4300A506E7 /* ZLHomeNavigationBar.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -355,6 +390,8 @@
 				A4C5D128219A796800B9F4C1 /* Info.plist */,
 				A4C5D13F219ABDE400B9F4C1 /* Const.swift */,
 				A430A62B21A2B8AA009F1D15 /* settingPlist.plist */,
+				A452ACA421B911250022BBEF /* emoji_sort.plist */,
+				A452ACA621B9112E0022BBEF /* emoji_mapping.plist */,
 			);
 			path = Others;
 			sourceTree = "<group>";
@@ -430,6 +467,16 @@
 				A4363C6121B0DD6200BBE818 /* ZLRelationRecommendView.xib */,
 				A4363C6321B0DF1200BBE818 /* ZLRelationRecommendCell.swift */,
 				A4363C6421B0DF1200BBE818 /* ZLRelationRecommendCell.xib */,
+				A452ACA021B8C80B0022BBEF /* ZLUserDetailDongTaiCell.swift */,
+				A452ACA121B8C80B0022BBEF /* ZLUserDetailDongTaiCell.xib */,
+				A40FEF4A21DDEC5200A52E67 /* ZLPostVideoArticleView.swift */,
+				A40FEF4C21DDEC6B00A52E67 /* ZLPostVideoArticleView.xib */,
+				A40FEF4E21DDF70B00A52E67 /* ZLDongtaiCollectionViewCell.swift */,
+				A40FEF4F21DDF70B00A52E67 /* ZLDongtaiCollectionViewCell.xib */,
+				A43A616021E44ED5005C6744 /* ZLDongtaiOriginThreadView.swift */,
+				A43A616221E44EF6005C6744 /* ZLDongtaiOriginThreadView.xib */,
+				A43A616421E45217005C6744 /* ZLDongtaiCollectionView.swift */,
+				A43A616621E492B6005C6744 /* ZLDongtaiCollectionView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -522,6 +569,39 @@
 				A4ED4ACA2194184000A5E81C /* Info.plist */,
 			);
 			path = zhangyanlfNewsUITests;
+			sourceTree = "<group>";
+		};
+		A4F1081821EDCB1F00FB8CB7 /* Weitoutiao */ = {
+			isa = PBXGroup;
+			children = (
+				A4F1081921EDCB1F00FB8CB7 /* Controller */,
+				A4F1081A21EDCB1F00FB8CB7 /* Model */,
+				A4F1081B21EDCB1F00FB8CB7 /* View */,
+			);
+			path = Weitoutiao;
+			sourceTree = "<group>";
+		};
+		A4F1081921EDCB1F00FB8CB7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				A4F1081C21EDCB4B00FB8CB7 /* ZLWeiTouTiaoController.swift */,
+				A4F1081D21EDCB4B00FB8CB7 /* ZLWeiTouTiaoController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		A4F1081A21EDCB1F00FB8CB7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A4F1081B21EDCB1F00FB8CB7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		EB6A46BC0A369B6A40C2D2BE /* Frameworks */ = {
@@ -644,21 +724,30 @@
 			files = (
 				A49ABE7F219C082000E63CF9 /* ZLConcernCell.xib in Resources */,
 				A424750C21A64CF9007CB22E /* ZLUserDetailController.xib in Resources */,
+				A452ACA521B911250022BBEF /* emoji_sort.plist in Resources */,
+				A43A616721E492B6005C6744 /* ZLDongtaiCollectionView.xib in Resources */,
+				A40FEF5121DDF70B00A52E67 /* ZLDongtaiCollectionViewCell.xib in Resources */,
+				A49DAC1721EC2F4300A506E7 /* ZLHomeNavigationBar.xib in Resources */,
 				A49ABE83219C1FC000E63CF9 /* ZLNoLoginHeaderView.xib in Resources */,
+				A4F1081F21EDCB4B00FB8CB7 /* ZLWeiTouTiaoController.xib in Resources */,
 				A424751021A65C17007CB22E /* ZLUserDetailHeaderView.xib in Resources */,
 				A49ABE73219BD1C600E63CF9 /* ZLMyOtherCell.xib in Resources */,
+				A43A616321E44EF6005C6744 /* ZLDongtaiOriginThreadView.xib in Resources */,
 				A4ED4AB32194184000A5E81C /* LaunchScreen.storyboard in Resources */,
 				A44DDFAB21AF90C90008AD0F /* ZLUserDetailPopController.storyboard in Resources */,
 				A4363C6221B0DD6300BBE818 /* ZLRelationRecommendView.xib in Resources */,
 				A44072BD21A24A150062FD09 /* ZLMoreLoginViewController.storyboard in Resources */,
 				A448607521A3FBF200CD1941 /* ZLOffLineDownLoadCell.xib in Resources */,
 				A4363C6621B0DF1200BBE818 /* ZLRelationRecommendCell.xib in Resources */,
+				A452ACA721B9112E0022BBEF /* emoji_mapping.plist in Resources */,
 				A430A62C21A2B8AB009F1D15 /* settingPlist.plist in Resources */,
 				A4C65686219D3FDB00E8E118 /* default_theme.plist in Resources */,
 				A4ED4AB02194184000A5E81C /* Assets.xcassets in Resources */,
+				A452ACA321B8C80B0022BBEF /* ZLUserDetailDongTaiCell.xib in Resources */,
 				A4C65688219D400700E8E118 /* night_theme.plist in Resources */,
 				A49ABE77219BEDBF00E63CF9 /* ZLAttentCell.xib in Resources */,
 				A44DDFB321AFC73F0008AD0F /* ZLNavigationBar.xib in Resources */,
+				A40FEF4D21DDEC6B00A52E67 /* ZLPostVideoArticleView.xib in Resources */,
 				A448606F21A3ABF300CD1941 /* ZLSettingCell.xib in Resources */,
 				A4ED4AAE2194183F00A5E81C /* Main.storyboard in Resources */,
 			);
@@ -757,10 +846,13 @@
 				A44DDFAD21AFB4A20008AD0F /* ZLPopoverAnimator.swift in Sources */,
 				A424750E21A65C06007CB22E /* ZLUserDetailHeaderView.swift in Sources */,
 				A4C5D134219A796800B9F4C1 /* ZLVideoViewController.swift in Sources */,
+				A43A616121E44ED5005C6744 /* ZLDongtaiOriginThreadView.swift in Sources */,
 				A40C10BE21AD2DB2007DAD21 /* ZLUserDetailBottomView.swift in Sources */,
 				A4E9374521AB95DC00C58810 /* Foundation+Extension.swift in Sources */,
 				A4C5D13E219AA84300B9F4C1 /* ZLMyTabBar.swift in Sources */,
 				A448606E21A3ABF300CD1941 /* ZLSettingCell.swift in Sources */,
+				A40FEF4B21DDEC5200A52E67 /* ZLPostVideoArticleView.swift in Sources */,
+				A40FEF5021DDF70B00A52E67 /* ZLDongtaiCollectionViewCell.swift in Sources */,
 				A49ABE7B219BF6F200E63CF9 /* UIKit+Extension.swift in Sources */,
 				A448606B21A3A50500CD1941 /* SettingModel.swift in Sources */,
 				A448607421A3FBF200CD1941 /* ZLOffLineDownLoadCell.swift in Sources */,
@@ -778,16 +870,20 @@
 				A4C5D135219A796800B9F4C1 /* ZLHuoShanViewController.swift in Sources */,
 				A4363C6021B0DD5200BBE818 /* ZLRelationRecommendView.swift in Sources */,
 				A44DDFB121AFC7210008AD0F /* ZLNavigationBar.swift in Sources */,
+				A452ACA221B8C80B0022BBEF /* ZLUserDetailDongTaiCell.swift in Sources */,
 				A49ABE7E219C082000E63CF9 /* ZLConcernCell.swift in Sources */,
 				A49ABE81219C1FAF00E63CF9 /* ZLNoLoginHeaderView.swift in Sources */,
 				A4C5D140219ABDE400B9F4C1 /* Const.swift in Sources */,
 				A4E9374721AB962C00C58810 /* Emoji.swift in Sources */,
 				A424750B21A64CF9007CB22E /* ZLUserDetailController.swift in Sources */,
 				A4C65683219D1DBC00E8E118 /* MyTheme.swift in Sources */,
+				A49DAC1521EC2F3700A506E7 /* ZLHomeNavigationBar.swift in Sources */,
 				A4FDF75021A5375A00202DDB /* SQliteManager.swift in Sources */,
 				A4C5D143219ABF5700B9F4C1 /* UIColor+Extension.swift in Sources */,
 				A49ABE6D219BB7B000E63CF9 /* NetWorkTool.swift in Sources */,
+				A43A616521E45217005C6744 /* ZLDongtaiCollectionView.swift in Sources */,
 				A44DDFA921AF90B30008AD0F /* ZLUserDetailPopController.swift in Sources */,
+				A4F1081E21EDCB4B00FB8CB7 /* ZLWeiTouTiaoController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

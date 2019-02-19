@@ -16,9 +16,28 @@ class ZLNewsNavigationController: UINavigationController {
         initGestureGlobal()
         
         let navigationBar = UINavigationBar.appearance()
-        navigationBar.theme_tintColor = "colors.black"
+        //navigationBar.theme_tintColor = "colors.black"
         navigationBar.theme_barTintColor = "colors.cellBackgroundColor"
+        
+        //设置导航颜色
+        if UserDefaults.standard.bool(forKey: isNight) {
+             navigationBar.setBackgroundImage(UIImage(named: "navigation_background_night"), for: .default)
+        } else {
+            navigationBar.setBackgroundImage(UIImage(named: "navigation_background"), for: .default)
+        }
+         NotificationCenter.default.addObserver(self, selector: #selector(receiveDayoOrNightChange), name: NSNotification.Name(rawValue: "dayoOrNightChange"), object: nil)
 
+    }
+    
+    
+    @objc func receiveDayoOrNightChange(notification: Notification) {
+        let selected = notification.object as! Bool
+        if selected { // 设置为日间
+            navigationBar.setBackgroundImage(UIImage(named: "navigation_background_night"), for: .default)
+            
+        } else { // 设置为夜间
+            navigationBar.setBackgroundImage(UIImage(named: "navigation_background"), for: .default)
+        }
     }
     
 

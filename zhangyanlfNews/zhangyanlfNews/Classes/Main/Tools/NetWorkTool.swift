@@ -14,7 +14,7 @@ protocol NetWorkToolProtocol {
     //------------Home--------------------------
     ///获取新闻标题数据
      static func loadHomeTitleData(completionCallBack:@escaping(_ sections:[ZLHomeNewsTitle]) -> ())
-    
+    static func loadHomeSearchSuggestInfo(_ completionHandler: @escaping (_ searchSuggest: String) -> ())
     
     //------------Mine--------------------------
     ///获取我的界面cell数据
@@ -29,6 +29,10 @@ protocol NetWorkToolProtocol {
     static func loadRelationFollow(userId: Int,completionCallBack:@escaping (_ user: ZLConcernUser) -> ())
     /// 点击了关注按钮，就会出现相关推荐数据
     static func loadRelationUserRecommend(userId: Int,completionCallBack:@escaping (_ concerns: [ZLUserCard]) -> ())
+    /// 获取用户详情动态数据
+    static func loadUserDetailDongtaiList(userId: Int,maxCursor: Int,completionCallBack:@escaping (_ cursor: Int,_ dongtais: [ZLUserDetailDongtai]) -> ())
+    /// 获取用户详情的文章列表数据
+    static func loadUserDetailArticleList(userId: Int, completionCallBack: @escaping (_ articles: [ZLUserDetailDongtai]) -> ())
     
 }
 
@@ -63,6 +67,27 @@ extension NetWorkToolProtocol {
                     
                 }
                 
+            }
+        }
+    }
+    
+    
+    /// 首页顶部导航栏搜索推荐标题内容
+    /// - parameter completionHandler: 返回搜索建议数据
+    /// - parameter searchSuggest: 首页搜索建议
+    static func loadHomeSearchSuggestInfo(_ completionHandler: @escaping (_ searchSuggest: String) -> ()) {
+        let url = BASE_URL + "/search/suggest/homepage_suggest/?"
+        let params = ["device_id": device_id,
+                      "iid": iid]
+        Alamofire.request(url, parameters: params).responseJSON { (response) in
+            // 网络错误的提示信息
+            guard response.result.isSuccess else { return }
+            if let value = response.result.value {
+                let json = JSON(value)
+                guard json["message"] == "success" else { return }
+                if let data = json["data"].dictionary {
+                    completionHandler(data["homepage_search_suggest"]!.string!)
+                }
             }
         }
     }
@@ -222,10 +247,71 @@ extension NetWorkToolProtocol {
     }
     
     
+    /// 获取用户详情动态数据
+    static func loadUserDetailDongtaiList(userId: Int,maxCursor: Int,completionCallBack:@escaping (_ cursor: Int,_ dongtais: [ZLUserDetailDongtai]) -> ()){
+        let url = BASE_URL + "/dongtai/list/v15/?"
+        let parameters = ["user_id": userId,
+                      "max_cursor": maxCursor,
+                      "device_id": device_id,
+                      "iid": iid]
+        
+        Alamofire.request(url, parameters: parameters).responseJSON { (response) in
+            // 网络错误的提示信息
+            guard response.result.isSuccess else { completionCallBack(maxCursor, []); return }
+            if let value = response.result.value {
+                let json = JSON(value)
+                guard json["message"] == "success" else { completionCallBack(maxCursor, []); return }
+                if let data = json["data"].dictionary {
+                    let max_cursor = data["max_cursor"]!.int
+                    if let datas = data["data"]!.arrayObject {
+                        completionCallBack(max_cursor!, datas.compactMap({
+                            ZLUserDetailDongtai.deserialize(from: $0 as? Dictionary)
+                        }))
+                    }
+                }
+            }
+        }
+    }
+    
+    /// 获取用户详情的文章列表数据
+    /// - parameter userId: 用户id
+    /// - parameter completionHandler: 返回文章数据
+    /// - parameter articles: 文章数据的数组
+    static func loadUserDetailArticleList(userId: Int, completionCallBack: @escaping (_ articles: [ZLUserDetailDongtai]) -> ()) {
+        
+        let url = BASE_URL + "/pgc/ma/?"
+        let params = ["uid": userId,
+                      "page_type": 1,
+                      "media_id": userId,
+                      "output": "json",
+                      "is_json": 1,
+                      "from": "user_profile_app",
+                      "version": 2,
+                      "as": "A1157A8297BEED7",
+                      "cp": "59549FCDF1885E1"] as [String: Any]
+        
+        Alamofire.request(url, parameters: params).responseJSON { (response) in
+            // 网络错误的提示信息
+            guard response.result.isSuccess else { return }
+            if let value = response.result.value {
+                let json = JSON(value)
+                guard json["message"] == "success" else { return }
+                if let data = json["data"].arrayObject {
+                completionCallBack(data.compactMap({ ZLUserDetailDongtai.deserialize(from: $0 as? Dictionary) }))
+                }
+            }
+        }
+    }
+    
+    
+    
+    
+   
+    
+    
 }
 
 struct NetWorkTool: NetWorkToolProtocol {
    
-    
-    
+
 }

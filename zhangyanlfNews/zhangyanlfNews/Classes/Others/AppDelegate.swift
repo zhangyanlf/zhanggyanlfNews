@@ -13,7 +13,7 @@ import SwiftTheme
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ThemeManager.setTheme(plistName: UserDefaults.standard.bool(forKey: isNight) ? "night_theme" : "default_theme", path: .mainBundle)
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = ZLMyTabController()
+        window?.theme_backgroundColor = "navigationBarTintColor"
         window?.makeKeyAndVisible()
         return true
     }

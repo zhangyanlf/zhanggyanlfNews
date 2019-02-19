@@ -68,6 +68,10 @@ class ZLUserDetailHeaderView: UIView, NibLoadable {
     
     weak var privorButton = UIButton()
     
+    /// 动态数组
+    var dongtais = [ZLUserDetailDongtai]()
+    
+    
     /// 指示条
     private lazy var indicatorView : UIView = {
         let indicatorView = UIView(frame: CGRect(x: (topTabButtonWidth - topTabindicatorWidth) * 0.5 , y: topTabView.height - 3, width: topTabindicatorWidth, height: topTabindicatorHeight))
@@ -143,6 +147,20 @@ class ZLUserDetailHeaderView: UIView, NibLoadable {
                         scrollView.contentSize = CGSize(width: button.frame.maxX, height: scrollView.height)
 
                     }
+                    // 添加 tableView
+                    let tableView = UITableView(frame: CGRect(x: CGFloat(index) * screenWidth, y: 0, width: screenWidth, height: bottomScrollView.height))
+                    tableView.zl_registerCell(cell: ZLUserDetailDongTaiCell.self)
+                    tableView.delegate = self
+                    tableView.dataSource = self
+                    tableView.isScrollEnabled = false
+                    tableView.showsVerticalScrollIndicator = false
+                    tableView.separatorStyle = .none
+                    tableView.tableFooterView = UIView()
+                    bottomScrollView.addSubview(tableView)
+                    if index == userDetail!.top_tab.count - 1 {
+                        scrollView.contentSize = CGSize(width: button.frame.maxX, height: scrollView.height)
+                        bottomScrollView.contentSize = CGSize(width: tableView.frame.maxX, height: bottomScrollView.height)
+                    }
                 }
             }
             scrollView.addSubview(indicatorView)
@@ -203,6 +221,7 @@ extension ZLUserDetailHeaderView {
         button.isSelected = !button.isSelected
         UIView.animate(withDuration: 0.25, animations: {
             self.indicatorView.centerX = button.centerX
+             self.bottomScrollView.contentOffset = CGPoint(x: CGFloat(button.tag) * screenWidth, y: 0)
         }) { (_) in
             self.privorButton = button
         }
@@ -223,7 +242,6 @@ extension ZLUserDetailHeaderView {
                 self.recommendViewHeight.constant = 0
                 UIView.animate(withDuration: 0.25, animations: {
                     self.recommendButton.imageView?.transform = .identity
-                    self.layoutIfNeeded()
                 })
             }
             
@@ -239,7 +257,7 @@ extension ZLUserDetailHeaderView {
                 self.recommendButtonTrailing.constant = 15.0
                 self.recommendViewHeight.constant = 233
                 UIView.animate(withDuration: 0.25, animations: {
-                    self.layoutIfNeeded()
+                   
                 }, completion: { (_) in
                     //点击关注后  就会出现相关数据
                     NetWorkTool.loadRelationUserRecommend(userId: self.userDetail!.user_id, completionCallBack: { (userCards) in
@@ -271,5 +289,36 @@ extension ZLUserDetailHeaderView {
         UIView.animate(withDuration: 0.25, animations: {
             self.layoutIfNeeded()
         })
+    }
+}
+
+
+extension ZLUserDetailHeaderView: UITableViewDelegate, UITableViewDataSource {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.y < 0 {
+            for subview in bottomScrollView.subviews {
+                let tableView = subview as! UITableView
+                tableView.isScrollEnabled = false
+            }
+        }
+    }
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dongtais.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.zl_dequeueReusableCell(indexPath: indexPath) as ZLUserDetailDongTaiCell
+        cell.dongtai = dongtais[indexPath.row]
+        return cell
+        
+    }
+    /// 设置 cell 的高度
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let dongtai = dongtais[indexPath.row];
+        return dongtai.cellHeight
+        
     }
 }
