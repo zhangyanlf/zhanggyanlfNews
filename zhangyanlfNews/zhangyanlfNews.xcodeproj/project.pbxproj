@@ -778,7 +778,7 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-zhangyanlfNews/Pods-zhangyanlfNews-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-zhangyanlfNews/Pods-zhangyanlfNews-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/IBAnimatable/IBAnimatable.framework",
@@ -805,7 +805,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-zhangyanlfNews/Pods-zhangyanlfNews-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-zhangyanlfNews/Pods-zhangyanlfNews-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		54C480B38640093E1D9823C2 /* [CP] Check Pods Manifest.lock */ = {
