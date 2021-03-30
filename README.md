@@ -1,10 +1,6 @@
 # zhangyanlfNews
 Swift4
-## 本系列视频实战教程需要有 Swift 语言基础，并且有过 iOS 开发相关经验，赞赏后可添加QQ 1442691978 提供赞赏截图索要视频及源码！
 
-# ![image](https://github.com/zhangyanlf/zhanggyanlfNews/blob/master/zhangyanlfNews/asset/zhangyanlf.jpeg)
-
-## 视频目录
 ### 1.项目搭建
 
       101-项目搭建
